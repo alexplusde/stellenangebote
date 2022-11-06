@@ -38,12 +38,12 @@ pages:
                 perm: stellenangebote[jobs]
     apply:
         title: translate:stellenangebote_apply_message
-        icon: rex-icon fa-file-text-alt
+        icon: rex-icon fa-file-text-o
         perm: stellenangebote[apply]
         subpages:
             message:
                 title: translate:stellenangebote_apply_message
-                icon: rex-icon fa-file-text-alt
+                icon: rex-icon fa-file-text-o
                 perm: stellenangebote[apply]
     settings:
         title: translate:stellenangebote_settings
