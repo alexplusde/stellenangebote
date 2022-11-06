@@ -1,12 +1,13 @@
-blaupause_title: blaupause-Addon
-
-# FriendsOfREDAXO-Addons können bei YTraduco zur Übersetzung eingereicht werden
+stellenangebote_title = Stellenangebote
 
 # Konfigurationsformulare
-blaupause_config = Einstellungen
-blaupause_config_mytextfield_label = Test-Feld
-blaupause_config_mytextfield_notice = Notiz, die etwas erklärt und bspw. einen Standardwert nennt. Hier: <code>Test</code>
+stellenangebote_config = Einstellungen
+stellenangebote_config_company_name_label = Unternehmens-Name
+stellenangebote_config_company_name_notice = Name des suchenden Unternehmens
+
+stellenangebote_config_company_name_label = Unternehmens-Website
+stellenangebote_config_company_name_notice = Adresse des Unternehmens (Startartikel in REDAXO auswählen)
 
 # YForm Tablelen-Übersetzung
-blaupause_table_name_label = Name
-blaupause_table_name_notice = Notiz, die etwas erklärt und auch einen Beispielwert nennen kann, z.B.: <code>Mein Name</code> 
+stellenangebote_table_title_label = Titel
+stellenangebote_table_title_notice = 
