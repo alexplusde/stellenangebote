@@ -36,6 +36,15 @@ pages:
                 title: translate:stellenangebote_location
                 icon: rex-icon fa-map-marker
                 perm: stellenangebote[]
+    apply:
+        title: translate:stellenangebote_title
+        icon: rex-icon fa-file-text-alt
+        perm: stellenangebote[]
+        subpages:
+            entry:
+                title: translate:stellenangebote_entry
+                icon: rex-icon fa-file-text-alt
+                perm: stellenangebote[]
     settings:
         title: translate:stellenangebote_settings
         icon: rex-icon fa-gear
