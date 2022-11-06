@@ -17,13 +17,12 @@ requires:
 page:
     title: translate:stellenangebote_title
     icon: rex-icon fa-magnet
+    block: system
+    prio: 18
 
 pages:
     stellenangebote:
         title: translate:stellenangebote_title
-
-        block: system
-        prio: 15
         icon: rex-icon fa-magnet
         perm: stellenangebote[]
         subpages:
@@ -32,17 +31,18 @@ pages:
                 icon: rex-icon fa-magnet
                 itemclass: pull-right
                 perm: admin
-            settings:
-                title: translate:stellenangebote_settings
-                icon: rex-icon fa-gear
-                itemclass: pull-right
-                perm: admin
-            docs:
-                title: translate:stellenangebote_docs
-                subPath: README.md
-                icon: rex-icon fa-info-circle
-                itemclass: pull-right
-                perm: stellenangebote[docs]
+
+    settings:
+        title: translate:stellenangebote_settings
+        icon: rex-icon fa-gear
+        itemclass: pull-right
+        perm: admin
+    docs:
+        title: translate:stellenangebote_docs
+        subPath: README.md
+        icon: rex-icon fa-info-circle
+        itemclass: pull-right
+        perm: stellenangebote[docs]
 
 default_config:
     company_name: ''
