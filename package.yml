@@ -13,6 +13,7 @@ requires:
         yform_spam_protection: "^1"
         yform_field: "^2"
         yform_geo_osm: "^1"
+        auto_delete: ">=0"
 
 page:
     title: translate:stellenangebote_title
