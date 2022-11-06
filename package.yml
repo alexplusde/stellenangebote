@@ -16,8 +16,7 @@ requires:
 
 page:
     title: translate:stellenangebote_title
-    prio: 100
-    icon: rex-icon fa-gear
+    icon: rex-icon fa-magnet
 
 pages:
     stellenangebote:
