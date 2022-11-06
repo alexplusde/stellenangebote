@@ -37,7 +37,7 @@ pages:
                 icon: rex-icon fa-map-marker
                 perm: stellenangebote[jobs]
     apply:
-        title: translate:stellenangebote_title
+        title: translate:stellenangebote_apply_message
         icon: rex-icon fa-file-text-alt
         perm: stellenangebote[apply]
         subpages:

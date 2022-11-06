@@ -66,7 +66,7 @@ if ($func !== '') {
     }
 }
 $content = "";
-$content .= '<p>'.rex_i18n::msg('Demo-Daten imporiteren').'</p>';
+$content .= '<p>'.rex_i18n::msg('stellenangebote_demo_notice').'</p>';
 $content .= '<p><a class="btn btn-primary" href="'.rex_url::currentBackendPage(['func' => 'setup'] + $csrf->getUrlParams()).'" data-confirm="'.rex_i18n::msg('stellenangebote_demo_warning').'">'.rex_i18n::msg('stellenangebote_demo').'</a></p>';
 
 $fragment = new rex_fragment();
