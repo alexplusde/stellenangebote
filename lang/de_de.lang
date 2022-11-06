@@ -1,5 +1,10 @@
 stellenangebote_title = Stellenangebote
 
+# Backend-Pages
+stellenangebote_docs = Hilfe
+stellenangebote_settings Einstellungen
+stellenangebote_table = Stellenangebote
+
 # Konfigurationsformulare
 stellenangebote_config = Einstellungen
 stellenangebote_config_company_name_label = Unternehmens-Name
@@ -8,6 +13,12 @@ stellenangebote_config_company_name_notice = Name des suchenden Unternehmens
 stellenangebote_config_company_name_label = Unternehmens-Website
 stellenangebote_config_company_name_notice = Adresse des Unternehmens (Startartikel in REDAXO auswählen)
 
-# YForm Tablelen-Übersetzung
+# Beauftragungshinweis
+
+stellenangebote_info_donate = Anders als die meisten Addons aus der REDAXO-Community ist die Entstehung und Weiterentwicklung dieses Addons nicht durch eigene Projekte gedeckt. Mit einer Beauftragung kannst du die Entwicklung rückwirkend finanzieren und sicherst die Weiterentwicklung zusätzlicher Features sowie eine verbesserte Anleitung. 
+stellenangebote_donate = Weiterentwicklung unterstützen 
+
+
+# YForm Tabellen-Übersetzung
 stellenangebote_table_title_label = Titel
 stellenangebote_table_title_notice = 
