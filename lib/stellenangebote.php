@@ -49,4 +49,9 @@ class stellenangebote extends \rex_yform_manager_dataset
     {
         return "";
     }
+    public function getApplyForm()
+    {
+        $fragment = new rex_fragment();
+        echo $fragment->parse('stellenangebote/apply.php');
+    }
 }
