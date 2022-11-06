@@ -1,5 +1,5 @@
 package: stellenangebote
-version: '0.1-dev'
+version: '0.2-dev'
 author: 'Alexander Walther'
 supportpage: https://github.com/alexplusde/stellenangebote
 
@@ -11,8 +11,6 @@ requires:
     packages:
         yform: "^4"
         yform_spam_protection: ">=1"
-
-
 
 page:
     title: translate:stellenangebote_title
@@ -26,9 +24,19 @@ pages:
         icon: rex-icon fa-magnet
         perm: stellenangebote[]
         subpages:
-            table:
-                title: translate:stellenangebote_table
+            entry:
+                title: translate:stellenangebote_entry
                 icon: rex-icon fa-magnet
+                itemclass: pull-right
+                perm: admin
+            contact:
+                title: translate:stellenangebote_contact
+                icon: rex-icon rex-icon-user
+                itemclass: pull-right
+                perm: admin
+            location:
+                title: translate:stellenangebote_location
+                icon: rex-icon fa-map-marker
                 itemclass: pull-right
                 perm: admin
 
