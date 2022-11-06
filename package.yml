@@ -27,18 +27,15 @@ pages:
             entry:
                 title: translate:stellenangebote_entry
                 icon: rex-icon fa-magnet
-                itemclass: pull-right
-                perm: admin
+                perm: stellenangebote[]
             contact:
                 title: translate:stellenangebote_contact
                 icon: rex-icon rex-icon-user
-                itemclass: pull-right
-                perm: admin
+                perm: stellenangebote[]
             location:
                 title: translate:stellenangebote_location
                 icon: rex-icon fa-map-marker
-                itemclass: pull-right
-                perm: admin
+                perm: stellenangebote[]
     settings:
         title: translate:stellenangebote_settings
         icon: rex-icon fa-gear
