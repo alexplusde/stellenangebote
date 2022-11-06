@@ -39,7 +39,6 @@ pages:
                 icon: rex-icon fa-map-marker
                 itemclass: pull-right
                 perm: admin
-
     settings:
         title: translate:stellenangebote_settings
         icon: rex-icon fa-gear
