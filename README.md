@@ -2,6 +2,8 @@
 
 Ein Addon zum Verwalten von Stellenanzeigen in REDAXO mit sinnvollen Vorlagen für Bewerbungsformulare und einer Verwaltung von Bewerberdaten.
 
+![image](https://user-images.githubusercontent.com/3855487/200197512-f31175b3-7f9f-4a02-8913-5acb51046c52.png)
+
 ## Features
 
 * Vollständig mit **YForm** umgesetzt: Alle Features und Anpassungsmöglichkeiten von YForm verfügbar
@@ -19,7 +21,7 @@ Ein Addon zum Verwalten von Stellenanzeigen in REDAXO mit sinnvollen Vorlagen f�
 
 ### Einstellungs-Seite
 
-Folgt...
+![image](https://user-images.githubusercontent.com/3855487/200197207-f962bdc0-89c2-44b7-9ad8-d5b1cf22eb73.png)
 
 ## Vorgefertigte Klassen
 
