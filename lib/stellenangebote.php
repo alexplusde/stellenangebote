@@ -1,6 +1,9 @@
 <?php
 class stellenangebote extends \rex_yform_manager_dataset
 {
+    private $locations = null;
+    private $contact = null;
+
     public function getTitle() :string
     {
         return $this->getValue('title');
@@ -45,10 +48,22 @@ class stellenangebote extends \rex_yform_manager_dataset
     {
         return $this->getValue('direct_apply');
     }
-    public function getLocationAddress() :string
+    
+    public function getLocations()
     {
-        return "";
+        if ($this->locations == null) {
+            $this->locations = $this->getRelatedCollection('location');
+        }
+        return $this->locations;
     }
+    public function getContact()
+    {
+        if ($this->contact == null) {
+            $this->contact = $this->getRelatedDataset('contact');
+        }
+        return $this->contact;
+    }
+
     public function getApplyForm()
     {
         $fragment = new rex_fragment();
