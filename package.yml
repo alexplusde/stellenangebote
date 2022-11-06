@@ -10,8 +10,10 @@ requires:
     redaxo: ^5.13
     packages:
         yform: "^4"
-        yform_spam_protection: ">=1"
-
+        yform_spam_protection: "^1"
+        yform_field: "^2"
+        yform_geo_osm: "^1"
+        
 page:
     title: translate:stellenangebote_title
     icon: rex-icon fa-magnet
