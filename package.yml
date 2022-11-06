@@ -22,29 +22,29 @@ pages:
     stellenangebote:
         title: translate:stellenangebote_title
         icon: rex-icon fa-magnet
-        perm: stellenangebote[]
+        perm: stellenangebote[jobs]
         subpages:
             entry:
                 title: translate:stellenangebote_entry
                 icon: rex-icon fa-magnet
-                perm: stellenangebote[]
+                perm: stellenangebote[jobs]
             contact:
                 title: translate:stellenangebote_contact
                 icon: rex-icon rex-icon-user
-                perm: stellenangebote[]
+                perm: stellenangebote[jobs]
             location:
                 title: translate:stellenangebote_location
                 icon: rex-icon fa-map-marker
-                perm: stellenangebote[]
+                perm: stellenangebote[jobs]
     apply:
         title: translate:stellenangebote_title
         icon: rex-icon fa-file-text-alt
-        perm: stellenangebote[]
+        perm: stellenangebote[apply]
         subpages:
-            entry:
-                title: translate:stellenangebote_entry
+            message:
+                title: translate:stellenangebote_apply_message
                 icon: rex-icon fa-file-text-alt
-                perm: stellenangebote[]
+                perm: stellenangebote[apply]
     settings:
         title: translate:stellenangebote_settings
         icon: rex-icon fa-gear
