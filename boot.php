@@ -6,3 +6,11 @@ if (rex_addon::get('yform')->isAvailable() && !rex::isSafeMode()) {
         stellenangebote::class
     );
 }
+
+if (rex::isBackend() && rex_be_controller::getCurrentPage() == "stellenangebote/edit" || rex_be_controller::getCurrentPage() == "yform/manager/data_edit") {
+    rex_extension::register('OUTPUT_FILTER', function (rex_extension_point $ep) {
+        $suchmuster = 'class="###stellenangebote-settings-editor###"';
+        $ersetzen = rex_config::get("stellenangebote", "editor");
+        $ep->setSubject(str_replace($suchmuster, $ersetzen, $ep->getSubject()));
+    });
+}

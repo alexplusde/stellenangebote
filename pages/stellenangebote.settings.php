@@ -12,10 +12,16 @@ $field = $form->addLinkmapField("company_url", null);
 $field->setLabel(rex_i18n::msg('stellenangebote_config_company_url_label'));
 $field->setNotice(rex_i18n::msg('stellenangebote_config_company_url_notice'));
 
+# Editor
+$field = $form->addInputField('text', 'editor', null, ['class' => 'form-control']);
+$field->setLabel(rex_i18n::msg('stellenangebote_editor'));
+$field->setNotice('z.B. <code>form-control redactor-editor--default</code>');
+
 $fragment = new rex_fragment();
 $fragment->setVar('class', 'edit', false);
 $fragment->setVar('title', $addon->i18n('stellenangebote_config'), false);
 $fragment->setVar('body', $form->get(), false);
+
 
 ?>
 <div class="row">
