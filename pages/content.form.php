@@ -19,6 +19,7 @@ $stellenangebot = stellenangebote::getByArticleId($articleId);
 
 if(!$stellenangebot) {
     $stellenangebot = stellenangebote::create();
+    $is_new = 1;
 }
 
 $yform = $stellenangebot->getForm();
@@ -27,7 +28,14 @@ $yform->setObjectparams('form_ytemplate', 'bootstrap');
 $yform->setObjectparams('form_showformafterupdate', 1);
 $yform->setObjectparams('form_action', $context->getUrl());
 
-$yform->setActionField('showtext', array('',rex_view::success('Gespeichert')));
+$yform->setObjectparams('main_table', 'rex_stellenangebote');
+
+if($stellenangebot->exists()) {
+    $yform->setObjectparams('getdata', 1);
+    $yform->setObjectparams('main_where', 'id='.$stellenangebot->getId());
+}
+
+$yform->setHiddenField('article_id', $articleId);
 
 $fragment = new rex_fragment();
 $fragment->setVar('class', 'edit', false);
