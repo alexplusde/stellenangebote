@@ -25,5 +25,14 @@ if (rex::isBackend()) {
         $ersetzen = rex_config::get("stellenangebote", "editor");
         $ep->setSubject(str_replace($suchmuster, $ersetzen, $ep->getSubject()));
     });
-    stellenangebote::addContentPage();
+    if(rex_be_controller::getCurrentPagePart() && rex_be_controller::getCurrentPagePart()[0] == "content") {
+        if(rex_config::get('stellenangebote', 'category_id')) {
+            $category = rex_category::get(rex_request('category_id', 'int'));
+            if($category && $category->getClosest(fn (rex_category $cat) => rex_config::get('stellenangebote', 'category_id') == $cat->getId())) {
+                stellenangebote::addContentPage();
+            }
+        } else {
+            stellenangebote::addContentPage();
+        }
+    }
 }
