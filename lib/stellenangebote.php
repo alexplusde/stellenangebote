@@ -67,6 +67,25 @@ class stellenangebote extends \rex_yform_manager_dataset
     public function getApplyForm()
     {
         $fragment = new rex_fragment();
-        echo $fragment->parse('stellenangebote/apply.php');
+        return $fragment->parse('stellenangebote/apply.php');
     }
+
+    public static function getByArticleId($id)
+    {
+        return self::query()->where('article_id', $id)->findOne();
+    }
+    
+    public static function addContentPage()
+    {
+
+        rex_extension::register('PAGES_PREPARED', function () {
+            $page = new rex_be_page('stellenangebote', rex_i18n::msg('stellenangebote_content_page_title'));
+            $page->setPjax(false);
+            $page->setSubPath(rex_addon::get('stellenangebote')->getPath('pages/content.form.php'));
+            $page_controller = rex_be_controller::getPageObject('content');
+            $page->setItemAttr('class', "pull-left");
+            $page_controller->addSubpage($page);
+        });
+    }
+
 }

@@ -9,6 +9,9 @@ stellenangebote_entry = Stellenangebote
 
 stellenangebote_apply_message = Bewerber:innen
 
+# Structure Content Page
+stellenangebote_content_page_title = Stellenangebot
+
 # Konfigurationsformulare
 stellenangebote_config = Einstellungen
 stellenangebote_config_company_name_label = Unternehmens-Name
