@@ -11,6 +11,7 @@ stellenangebote_apply_message = Bewerber:innen
 
 # Structure Content Page
 stellenangebote_content_page_title = Stellenangebot
+stellenangebote_category_id = Beschränke auf Kategorie
 
 # Konfigurationsformulare
 stellenangebote_config = Einstellungen

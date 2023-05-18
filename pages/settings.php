@@ -19,6 +19,10 @@ $field = $form->addInputField('text', 'editor', null, ['class' => 'form-control'
 $field->setLabel(rex_i18n::msg('stellenangebote_editor'));
 $field->setNotice('z.B. <code>form-control redactor-editor--default</code>');
 
+# Metafelder beschränken
+$field = $form->addLinkmapField('category_id');
+$field->setLabel($this->i18n('stellenangebote_category_id'));
+
 $fragment = new rex_fragment();
 $fragment->setVar('class', 'edit', false);
 $fragment->setVar('title', $addon->i18n('stellenangebote_config'), false);
