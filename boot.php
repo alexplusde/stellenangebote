@@ -25,7 +25,5 @@ if (rex::isBackend()) {
         $ersetzen = rex_config::get("stellenangebote", "editor");
         $ep->setSubject(str_replace($suchmuster, $ersetzen, $ep->getSubject()));
     });
-    if(rex_be_controller::getPageObject('content')) {
-        stellenangebote::addContentPage();
-    }
+    stellenangebote::addContentPage();
 }
