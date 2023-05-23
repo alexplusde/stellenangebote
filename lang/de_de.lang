@@ -3,6 +3,8 @@ stellenangebote_title = Stellenangebote
 # Backend-Pages
 stellenangebote_docs = Hilfe
 stellenangebote_settings = Einstellungen
+stellenangebote_benefits = Vorteile (Benefits)
+stellenangebote_category = Kategorien
 stellenangebote_contact = Ansprechpersonen
 stellenangebote_location = Standorte
 stellenangebote_entry = Stellenangebote

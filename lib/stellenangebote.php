@@ -14,7 +14,7 @@ class stellenangebote extends \rex_yform_manager_dataset
     }
     public function getDescription() :string
     {
-        return $this->getValue('title');
+        return $this->getValue('description');
     }
     public function getDatePosted() :string
     {
@@ -56,6 +56,16 @@ class stellenangebote extends \rex_yform_manager_dataset
         }
         return $this->locations;
     }
+
+    public function getLocationsFlattened() {
+        $location_list = [];
+        
+        foreach($this->getLocations() as $location) {
+            $location_list[] =  $location->getLocality(); 
+        };
+        return implode(", ", $location_list); 
+    }
+
     public function getContact()
     {
         if ($this->contact == null) {
@@ -75,6 +85,18 @@ class stellenangebote extends \rex_yform_manager_dataset
         return self::query()->where('article_id', $id)->findOne();
     }
     
+    public function getUrl() :string {
+        if ($this->getValue('article_id')) {
+            return rex_article::get(self::getValue('article_id'))->getUrl();
+        }
+        return "";
+    }
+    
+    public function getCategoryName() :string
+    {
+        return "Logistik";
+    }
+
     public static function addContentPage()
     {
 
@@ -87,5 +109,33 @@ class stellenangebote extends \rex_yform_manager_dataset
             $page_controller->addSubpage($page);
         });
     }
+
+    public static function findOnline($limit = 6) {
+
+        return stellenangebote::query()->where("status", 0, '>=')->limit($limit)->find();
+
+    }
+
+    public function getShareMailHref() :string {
+        return "";
+    }
+    public function getShareFacebookHref() :string {
+        return "";
+    }
+    public function getShareLinkedInHref() :string {
+        return "";
+    }
+    public function getShareTwitterHref() :string {
+        return "";
+    }
+
+    public function getBenefitsIds() :string {
+        return $this->getValue('benefits');
+    }
+    
+    public function getBenefits() {
+        return stellenangebote_benefits::findBySet($this->getBenefitsIds());  
+    }
+
 
 }

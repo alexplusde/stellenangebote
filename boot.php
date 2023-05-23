@@ -17,6 +17,14 @@ if (rex_addon::get('yform')->isAvailable() && !rex::isSafeMode()) {
         'rex_stellenangebote_apply',
         stellenangebote_apply::class
     );
+    rex_yform_manager_dataset::setModelClass(
+        'rex_stellenangebote_benefits',
+        stellenangebote_benefits::class
+    );
+    rex_yform_manager_dataset::setModelClass(
+        'rex_stellenangebote_category',
+        stellenangebote_category::class
+    );
 }
 
 if (rex::isBackend()) {
