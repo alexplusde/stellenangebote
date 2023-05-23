@@ -13,4 +13,12 @@ class stellenangebote_contact extends \rex_yform_manager_dataset
     {
         return $this->getValue('phone');
     }
+    public function getImage()
+    {
+        return $this->getValue('photo');
+    }
+    public function getPhoto()
+    {
+        return $this->getValue('photo');
+    }
 }
