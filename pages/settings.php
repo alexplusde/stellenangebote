@@ -18,10 +18,10 @@ $field = $form->addLinkmapField("company_url", null);
 $field->setLabel(rex_i18n::msg('stellenangebote_config_company_url_label'));
 $field->setNotice(rex_i18n::msg('stellenangebote_config_company_url_notice'));
 
-/* To Do 
- * 
+/* To Do
+ *
  * Über das Unternehmen: Siegel / Logos / Auszeichnungen als Medien abfragen und in about.php ausgeben
- *  
+ *
  */
 
 
@@ -33,6 +33,10 @@ $field->setNotice('z.B. <code>form-control redactor-editor--default</code>');
 # Metafelder beschränken
 $field = $form->addLinkmapField('category_id');
 $field->setLabel($this->i18n('stellenangebote_category_id'));
+
+# Metafelder beschränken
+$field = $form->addLinkmapField('apply_value_id');
+$field->setLabel($this->i18n('stellenangebote_apply_value_id'));
 
 
 
@@ -50,10 +54,10 @@ $field = $form->addTextField('url_linkedin');
 $field->setAttribute('type', 'url');
 $field->setLabel(rex_i18n::msg('stellenangebote_config_url_linkedin'));
 
-/* To Do 
- * 
+/* To Do
+ *
  * Instagram, Facebook, Snapchat, WhatsApp
- *  
+ *
  */
 
 

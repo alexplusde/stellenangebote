@@ -6,7 +6,7 @@
 				<a class="scrollto" id="formwrapperapply"></a>
 				<?php
 
-				$yform = new rex_yform();
+                $yform = new rex_yform();
 
 				$yform->setObjectparams('form_name', 'table-rex_stellenangebote_apply');
 				$yform->setObjectparams('form_action', rex_getUrl(rex_article::getCurrentId()) . "?action=sent#apply");

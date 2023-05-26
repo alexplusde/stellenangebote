@@ -71,3 +71,5 @@ default_config:
     company_name: ''
     company_url: ''
     editor: 'class="form-control cke5-editor" data-lang="de" data-profile="default"'
+    apply_value_id: 
+    category_id: 

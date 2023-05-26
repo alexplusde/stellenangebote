@@ -4,7 +4,7 @@
         <h2>Besondere Benefits zur Stelle</h2>
 
 
-<?php   
+<?php
 
 $stellenangebot = $this->getVar('stellenangebot');
 $benefits = $stellenangebot->getBenefits();
@@ -17,7 +17,7 @@ $slides_count = (int)ceil(count($benefits) / 4);
 
             <?php
             $active = "active";
-            for($i = 0; $i < $slides_count; $i++) { ?>
+for($i = 0; $i < $slides_count; $i++) { ?>
             <button type="button" data-bs-target="#carouselBenefitsIndicators" data-bs-slide-to="<?= $i ?>" class="<?= $active ?>" aria-current="true" aria-label="Slide <?= $i + 1 ?>"></button>
             <?php } ?>
         </div>
@@ -31,24 +31,24 @@ $active = "active";
 $j = 0;
 foreach($benefits as $benefit) {
 
-if(!$active && ($j % 4) == 0) { 
+    if(!$active && ($j % 4) == 0) {
 
-    ?>
+        ?>
             </div>
             <div class="carousel-item row"> 
-<?php 
-}   
-?>        
+<?php
+    }
+    ?>        
 
                 <div class="col col-md-6">
                     <p><i class="<?= $benefit->getIcon(); ?>"></i> <?= $benefit->getName(); ?></p>
                 </div>
 
 <?php
-$active = false;
-$j++;
-}            
-        ?>
+    $active = false;
+    $j++;
+}
+?>
            </div>
         </div>
 
