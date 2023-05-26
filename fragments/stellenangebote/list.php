@@ -25,10 +25,10 @@ foreach($stellenangebot->getLocations() as $location) {
     <div role="listitem" class="job-uebersicht-list-item">
         <a class="card job-card h-100 text-decoration-none  border-0 shadow-sm" href="<?= $stellenangebot->getUrl() ?>">
             <div class="card-body">
-                <div class="text-primary"><?= $stellenangebot->getCategoryName() ?></div>
+                <div class="text-body"><?= $stellenangebot->getCategoryName() ?></div>
                 <h3 class="card-title"><?= $stellenangebot->getTitle() ?></h3>
                 <ul class="job-card-tags-list list-unstyled">
-                    <li class="job-card-tag job-card-tag-location">
+                    <li class="job-card-tag job-card-tag-location text-body">
                         <i class="bi bi-geo-fill"></i> <span class="">Ort:</span> <?= implode(", ", $location_list); ?>
                     </li>
                 </ul>
