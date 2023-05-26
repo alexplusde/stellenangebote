@@ -34,9 +34,11 @@ $field->setNotice('z.B. <code>form-control redactor-editor--default</code>');
 $field = $form->addLinkmapField('category_id');
 $field->setLabel($this->i18n('stellenangebote_category_id'));
 
-# Metafelder beschränken
 $field = $form->addLinkmapField('apply_value_id');
 $field->setLabel($this->i18n('stellenangebote_apply_value_id'));
+
+$field = $form->addLinkmapField('thank_you_id');
+$field->setLabel($this->i18n('stellenangebote_thank_you_id'));
 
 
 

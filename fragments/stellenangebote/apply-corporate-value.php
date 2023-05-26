@@ -12,7 +12,10 @@
 			<a class="scrollto" id="apply"></a>
 			<?php
     
-    $yform = new rex_yform();
+
+            $stellenangebot = $this->getVar('stellenangebot');
+			$contact = $stellenangebot->getContact();
+			$yform = new rex_yform();
     
 			$yform->setObjectparams('form_name', 'table-rex_stellenangebote_apply');
 			$yform->setObjectparams('form_action', rex_getUrl(rex_article::getCurrentId())."?action=sent#apply");
@@ -30,26 +33,22 @@
 
 			# Parameter zur Übergabe an das E-Mail-Template
 			$yform->setValueField('hidden', ["title", $this->getVar("title"), null, "no_db"]);
-			$yform->setValueField('hidden', ["stellenangebote_name", $this->getVar("stellenangebote_name"), null, "no_db"]);
-			$yform->setValueField('hidden', ["stellenangebote_email", $this->getVar("stellenangebote_email"), null, "no_db"]);
+			$yform->setValueField('hidden', ["stellenangebote_id", $stellenangebot->getId(), null, "no_db"]);
+			$yform->setValueField('hidden', ["stellenangebote_name", $stellenangebot->getName(), null, "no_db"]);
+			if($contact) {
+			    $yform->setValueField('hidden', ["stellenangebote_email", $stellenangebot->getContact()->getMail(), null, "no_db"]);
+			}
 			$yform->setValueField('hidden', ["stellenangebote_signature", $this->getVar("stellenangebote_signature"), null, "no_db"]);
-			$yform->setValueField('hidden', ["client_name", $this->getVar("client_name"), null, "no_db"]);
-			$yform->setValueField('hidden', ["client_email", $this->getVar("client_email"), null, "no_db"]);
-			$yform->setValueField('hidden', ["client_company", $this->getVar("client_company"), null, "no_db"]);
-			$yform->setValueField('hidden', ["client_signature", $this->getVar("client_signature"), null, "no_db"]);
 
-			$yform->setValueField('submit', ['submit','Absenden','','no_db']);
+			$yform->setValueField('submit_once', ['submit','Absenden','Bitte warten...']);
 
 			# E-Mail-Versand
 			$yform->setActionField('tpl2email', array('stellenangebote_apply_confirm','email'));
 			$yform->setActionField('attach', array('upload1,upload2,upload3'));
-			$yform->setActionField('tpl2email', array('stellenangebote_apply',$this->getVar("client_email")));
+			$yform->setActionField('tpl2email', array('stellenangebote_apply',$this->stellenangebot->getContact()->getMail()));
 			$yform->setValueField('spam_protection', array("honeypot","Bitte nicht ausfüllen.","Ihre Anfrage wurde als Spam erkannt und gelöscht. Bitte versuchen Sie es in einigen Minuten erneut oder wenden Sie sich persönlich an uns.", 0));
-			$yform->setActionField('showtext', array('','<div class="apply_success">'.$this->getVar("success").'</div>'));
     
-			# Weiterleitung nach erfolgreichem Versand
-			# $yform->setActionField('redirect', array($this->getVar("thank_you_url")));
-
+			$yform->setActionField('redirect', array(rex_config::get('stellenangebote', 'thank_you_id')));
 
 			echo $yform->getForm();
 			?>
