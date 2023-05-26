@@ -30,6 +30,14 @@ pages:
                 title: translate:stellenangebote_entry
                 icon: rex-icon fa-magnet
                 perm: stellenangebote[jobs]
+            category:
+                title: translate:stellenangebote_category
+                icon: rex-icon fa-folder
+                perm: stellenangebote[jobs]
+            benefits:
+                title: translate:stellenangebote_benefits
+                icon: rex-icon fa-plus
+                perm: stellenangebote[jobs]
             contact:
                 title: translate:stellenangebote_contact
                 icon: rex-icon rex-icon-user
