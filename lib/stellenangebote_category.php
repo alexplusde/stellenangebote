@@ -14,5 +14,13 @@ class stellenangebote_category extends \rex_yform_manager_dataset
     {
         return $this->getValue('icon');
     }
+    public function getStatus() :string
+    {
+        return $this->getValue('status');
+    }
+    public function getImage() :string
+    {
+        return $this->getValue('image');
+    }
 
 }

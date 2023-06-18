@@ -1,6 +1,7 @@
 <?php
 $stellenangebot = $this->getVar('stellenangebot');
 $contact = $stellenangebot->getContact();
+$locations = $stellenangebot->getLocations();
 ?>
 <div class="module job-detail-contact in-view-element in-view-in-animation" tabindex="0">
 	<div class="container-fluid">
@@ -28,14 +29,17 @@ $contact = $stellenangebot->getContact();
 								href="<?= $contact->getMail() ?>"><?= $contact->getMail() ?></a>
 						</div>
 					</div>
-					<div class="col-12 col-lg-5 offset-lg-1 p-4"><strong
-							class="job-detail-infoboard-content-headline">Unsere Heimat - und vielleicht bald auch
-							Deine:</strong>
-						<address class="job-detail-infoboard-content-text">bonprix Handelsgesellschaft
-							mbH<br>Haldesdorfer Straße 61<br>22179 Hamburg</address><a
-							class="job-detail-infoboard-content-link"
-							href="http://maps.google.de/maps?q=Haldesdorfer Straße 61, 22179 Hamburg" target="_blank"
-							rel="noreferrer noopener">Auf Karte anzeigen</a>
+					<div class="col-12 col-lg-5 offset-lg-1 p-4">
+						<?php
+						foreach($locations as $location) {
+							?>
+							<strong	class="job-detail-infoboard-content-headline"><?= $location->getName(); ?></strong>
+							<address class="job-detail-infoboard-content-text"><?= $location->getStreet(); ?><br><?= $location->getZip(); ?> <?= $location->getLocality(); ?></address>
+							<a class="job-detail-infoboard-content-link" href="http://maps.google.de/maps?q=<?= $location->getStreet(); ?>, <?= $location->getZip(); ?> <?= $location->getLocality(); ?>" target="_blank" rel="noreferrer noopener">Auf Karte anzeigen</a>
+							<p>&nbsp;</p>
+							<?php
+						}
+						?>
 					</div>
 				</div>
 			</div>
