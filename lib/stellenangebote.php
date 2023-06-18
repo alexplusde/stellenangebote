@@ -112,9 +112,17 @@ class stellenangebote extends \rex_yform_manager_dataset
         return rex_yrewrite::getFullUrlByArticleId();
     }
     
+    public function getCategory() :stellenangebote_category
+    {
+        return $this->getRelatedDataset('category_id');
+    }
     public function getCategoryName() :string
     {
-        return "Logistik";
+        return $this->getCategory()->getName();
+    }
+    public function getCategoryIcon() :string
+    {
+        return $this->getCategory()->getIcon();
     }
 
     public static function addContentPage()
@@ -132,7 +140,7 @@ class stellenangebote extends \rex_yform_manager_dataset
 
     public static function findOnline($limit = 6) {
 
-        return stellenangebote::query()->where("status", 0, '>=')->limit($limit)->find();
+        return stellenangebote::query()->where("status", 1, '>=')->limit($limit)->find();
 
     }
 
