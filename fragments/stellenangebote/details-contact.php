@@ -12,12 +12,6 @@ $locations = $stellenangebot->getLocations();
 			<div class="job-detail-infoboard-content col-10 order-1 offset-1 col-lg-5 order-lg-2 col-xl-6">
 				<div class="row">
 					<div class="col-12 col-lg-6 p-4">
-						<div class="job-detail-infoboard-content-headline"><strong>Wir geben der digitalen Fashionwelt
-								ein Gesicht. Und freuen uns dabei auf Deins!</strong></div>
-						<p class="job-detail-infoboard-content-text">Wir wollen Dir und Deinen mutigen Ideen die
-							perfekte Bühne bieten, um gemeinsam mehr möglich zu machen. Gib uns mehr Grrr! Weniger Miau!
-							Lass raus, was in Dir steckt und schick uns Deine überzeugenden Unterlagen.</p>
-
 						<p class="job-detail-infoboard-content-text-question"><strong>Noch Fragen?</strong></p>
 						<div class="job-detail-infoboard-content-text-identiy">
 							<?= $contact->getName() ?>
