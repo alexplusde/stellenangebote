@@ -14,6 +14,10 @@ $field = $form->addTextAreaField('company_text', null, ["class" => "form-control
 $field->setLabel(rex_i18n::msg('stellenangebote_config_company_text_label'));
 $field->setNotice(rex_i18n::msg('stellenangebote_config_company_text_notice'));
 
+$field = $form->addTextAreaField('company_email_signature', null, ["class" => "form-control redactor-editor--default"]);
+$field->setLabel(rex_i18n::msg('stellenangebote_config_company_email_signature_label'));
+$field->setNotice(rex_i18n::msg('stellenangebote_config_company_email_signature_notice'));
+
 $field = $form->addLinkmapField("company_url", null);
 $field->setLabel(rex_i18n::msg('stellenangebote_config_company_url_label'));
 $field->setNotice(rex_i18n::msg('stellenangebote_config_company_url_notice'));
@@ -34,11 +38,9 @@ $field->setNotice('z.B. <code>form-control redactor-editor--default</code>');
 $field = $form->addLinkmapField('category_id');
 $field->setLabel($this->i18n('stellenangebote_category_id'));
 
+# Metafelder beschränken
 $field = $form->addLinkmapField('apply_value_id');
 $field->setLabel($this->i18n('stellenangebote_apply_value_id'));
-
-$field = $form->addLinkmapField('thank_you_id');
-$field->setLabel($this->i18n('stellenangebote_thank_you_id'));
 
 
 
