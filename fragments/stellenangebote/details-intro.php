@@ -10,40 +10,29 @@ $stellenangebot = $this->getVar('stellenangebot');
 				<?= rex_media_plus::get($stellenangebot->getImage())->getImg(); ?>
 			</div>
 			<div class="job-detail-header-body col-lg-6 py-4">
-				<ul class="job-details-tags list-unstyled list-group list-group-horizontal">
-					<li
-						class="list-group-item job-detail-header-tag job-detail-header-tag-location bg-transparent text-white">
+				<div class="job-details-tags mb-4">
+					<div class="badge text-bg-light">
 						<i class="bi bi-geo-fill"></i>
 						<span class="visually-hidden">Ort:</span>
 						<?= $stellenangebot->getLocationNames() ?>
-					</li>
-					<li
-						class="list-group-item job-detail-header-tag job-detail-header-tag-employment-type bg-transparent text-white">
+					</div>
+					<div class="badge text-bg-light">
 						<i class="bi bi-hourglass-split"></i>
 
 						<span class="visually-hidden">Einstellungsart:</span>
 						<?= $stellenangebot->getEmploymentTypeFormatted() ?>
-					</li>
-					<li
-						class="list-group-item job-detail-header-tag job-detail-header-tag-employment-time bg-transparent text-white">
-						<i class="bi bi-clock-history"></i>
-
-						<span class="visually-hidden">Dauer:</span>
-						<?= $stellenangebot->getEmploymentTypeFormatted() ?>
-					</li>
-					<li
-						class="list-group-item job-detail-header-tag job-detail-header-tag-employment-time bg-transparent text-white">
+					</div>
+					<div class="badge text-bg-light">
 						<i
 							class="bi bi-tag <?=  $stellenangebot->getCategoryIcon() ?>"></i>
-
 						<span class="visually-hidden">Bereich:</span>
 						<?=  $stellenangebot->getCategoryName() ?>
-					</li>
-				</ul>
+					</div>
+				</div>
 
 				<div class="job-detail-header-pre-title">
 				</div>
-				<h1 class="job-detail-header-title">
+				<h1 class="display-5 job-detail-header-title">
 					<?= $stellenangebot->getTitle() ?>
 					<!--					<button type="button" data-bs-toggle="tooltip" title="zur Favoritenliste hinzufügen"
 						class="share-item btn text-white fav">

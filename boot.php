@@ -44,3 +44,8 @@ if (rex::isBackend()) {
         }
     }
 }
+
+if (rex::isBackend() && rex::isDebugMode() && rex_config::get('plus_bs5', 'dev')) {
+    bs5::writeModule("stellenangebote", 'stellenangebote/%');
+    bs5::writeTemplate("stellenangebote", 'stellenangebote/%');
+}
