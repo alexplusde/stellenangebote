@@ -15,7 +15,7 @@
 				$yform->setObjectparams('real_field_names', true);
 
 				$yform->setValueField('html', ['', '<div class="row">']);
-				$yform->setValueField('html', ['', '<div class="col col-md-6">']);
+				$yform->setValueField('html', ['', '<div class="col col-12 col-md-6">']);
 
 				# Ausfüllbare Felder
 				$yform->setValueField('text', ['name', 'Name', '', '', '{"required":"required"}']);
@@ -24,7 +24,7 @@
 				$yform->setValueField('text', ['email', 'E-Mail-Adresse', '', '0', '{"type":"email"}', 'Geben Sie eine Telefonnummer oder eine E-Mail-Adresse an.']);
 				$yform->setValueField('choice', ['availability', 'Wann sind Sie am besten erreichbar?', 'Morgens=morgens,Mittags=mittags,Nachmittags=nachmittags,Abends=abends', '1', '1', '', '', '', '', '', '', '', '', '0']);
 
-				$yform->setValueField('html', ['', '</div><div class="col col-md-6">']);
+				$yform->setValueField('html', ['', '</div><div class="col col-12 col-md-6">']);
 
 				$yform->setValueField('upload', ['upload1', 'Anhang 1', '0,8000', '.jpg,.png,.pdf', '', 'Dateigröße unterschritten.,Dateigröße überschritten.,Bitte speichern Sie Ihren Anhang als PDF-Datei.,Bitte wählen Sie eine Datei aus.,Der Anhang wurde gelöscht.', 'Zulässige Dateitypen: JPG, PNG, PDF.']);
 				$yform->setValueField('upload', ['upload2', 'Anhang 2', '0,8000', '.jpg,.png,.pdf', '', 'Dateigröße unterschritten.,Dateigröße überschritten.,Bitte speichern Sie Ihren Anhang als PDF-Datei.,Bitte wählen Sie eine Datei aus.,Der Anhang wurde gelöscht.', 'Zulässige Dateitypen: JPG, PNG, PDF.']);
