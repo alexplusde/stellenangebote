@@ -10,7 +10,7 @@
 
 				$yform->setObjectparams('form_name', 'table-rex_stellenangebote_apply');
 				$yform->setObjectparams('form_action', rex_getUrl(rex_article::getCurrentId()) . "?action=sent#apply");
-				$yform->setObjectparams('form_ytemplate', 'bootstrap');
+				$yform->setObjectparams('form_ytemplate', 'bootstrap5,bootstrap');
 				$yform->setObjectparams('form_showformafterupdate', 0);
 				$yform->setObjectparams('real_field_names', true);
 

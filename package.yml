@@ -1,5 +1,5 @@
 package: stellenangebote
-version: '2.0.1'
+version: '2.0.2'
 author: 'Alexander Walther'
 supportpage: https://github.com/alexplusde/stellenangebote
 
@@ -47,12 +47,16 @@ pages:
                 icon: rex-icon fa-map-marker
                 perm: stellenangebote[jobs]
     apply:
-        title: translate:stellenangebote_apply_message
+        title: translate:stellenangebote_apply
         icon: rex-icon fa-file-text-o
         perm: stellenangebote[apply]
         subpages:
             message:
-                title: translate:stellenangebote_apply_message
+                title: translate:stellenangebote_apply
+                icon: rex-icon fa-file-text-o
+                perm: stellenangebote[apply]
+            custom_message:
+                title: translate:stellenangebote_apply_custom
                 icon: rex-icon fa-file-text-o
                 perm: stellenangebote[apply]
     settings:

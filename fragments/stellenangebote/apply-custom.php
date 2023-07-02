@@ -16,9 +16,12 @@
     
 			$yform->setObjectparams('form_name', 'table-rex_stellenangebote_apply_custom');
 			$yform->setObjectparams('form_action', rex_getUrl(rex_article::getCurrentId())."?action=sent#apply_custom");
-			$yform->setObjectparams('form_ytemplate', 'bootstrap');
+			$yform->setObjectparams('form_ytemplate', 'bootstrap5,bootstrap');
 			$yform->setObjectparams('form_showformafterupdate', 0);
 			$yform->setObjectparams('real_field_names', true);
+
+			$yform->setValueField('html', ['', '<div class="row">']);
+			$yform->setValueField('html', ['', '<div class="col col-12 col-md-6">']);
 
 			# Ausfüllbare Felder
 			$yform->setValueField('fieldset', ['fieldset_job','Mir ist wichtig im Job, dass ...','','onlyopen']);
@@ -35,6 +38,9 @@
 			$yform->setValueField('choice', ['personal_question_4','...meine Arbeit mich herausfordert und mir Chancen zur beruflichen Weiterentwicklung bietet.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
 			$yform->setValueField('choice', ['personal_question_5','... ich tolerant gegenüber vielen verschiedenen Menschen und gesellschaftlichen Gruppen bin.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
 			$yform->setValueField('fieldset', ['fieldset_personal_close','','','onlyclose']);
+
+			$yform->setValueField('html', ['', '</div><div class="col col-12 col-md-6">']);
+
 			$yform->setValueField('fieldset', ['fieldset_personal_custom','Was ist Ihnen im Leben noch wichtig, was wir hier nicht berücksichtigt haben?','','onlyopen']);
 			$yform->setValueField('textarea', ['personal_custom','Mir ist im Leben wichtig...','','0','{"placeholder":"Mir ist im Leben wichtig..."}']);
 			$yform->setValueField('fieldset', ['fieldset_personal_custom_close','','','onlyclose']);
@@ -45,9 +51,11 @@
 			$yform->setValueField('choice', ['workarea','Arbeitsgebiet','Kindertagesstätte=1,Essen auf Rädern=2,Ambulante Pflege von Senioren=3,Verwaltung=4','1','1','','','','','','','','','0']);
 			$yform->setValueField('fieldset', ['fieldset_work_area_close','','','onlyclose']);
 
-							$yform->setValueField('privacy_policy', ['privacy_policy','Datenschutzerklärung','1','','','','Ich habe die Datenschutzerklärung zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden.','Mehr erfahren','30']);
+			$yform->setValueField('privacy_policy', ['privacy_policy','Datenschutzerklärung','1','','','','Ich habe die Datenschutzerklärung zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden.','Mehr erfahren','30']);
 
-			
+			$yform->setValueField('html', ['', '</div>']);
+			$yform->setValueField('html', ['', '</div>']);
+            
 			$yform->setValueField('submit', ['submit','Absenden','','no_db']);
 
 			# E-Mail-Versand
