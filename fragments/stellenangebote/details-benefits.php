@@ -12,8 +12,8 @@ $stellenangebot = $this->getVar('stellenangebot');
 			    ?>
 
 			<div class="col col-6 col-md-3 mb-4">
-				<div class="display-6 mb-2"><i
-						class="<?= $benefit->getIcon(); ?>"></i>
+				<div class="display-6 mb-2">
+					<?= $benefit->showIcon(); ?>
 				</div>
 				<p class="h3"><?= $benefit->getName(); ?></p>
 			</div>

@@ -14,8 +14,8 @@
 			<div class="col col-12 col-md-3 mb-4">
 				<div class="card h-100">
 					<div class="card-body">
-						<div class="display-6 mb-2"><i
-								class="<?= $benefit->getIcon(); ?>"></i>
+						<div class="display-6 mb-2">
+							<?= $benefit->showIcon(); ?>
 						</div>
 						<h3><?= $benefit->getName(); ?></h3>
 						<p><?= $benefit->getDescription(); ?></p>
