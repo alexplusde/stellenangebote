@@ -114,7 +114,7 @@ class stellenangebote extends \rex_yform_manager_dataset
         return rex_yrewrite::getFullUrlByArticleId();
     }
     
-    public function getCategory() :stellenangebote_category
+    public function getCategory() : ?stellenangebote_category
     {
         return $this->getRelatedDataset('category_id');
     }
