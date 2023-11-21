@@ -1,38 +1,39 @@
 <?php
+
 class stellenangebote extends \rex_yform_manager_dataset
 {
     private $locations = null;
     private $contact = null;
 
-    public function getTitle() :string
+    public function getTitle(): string
     {
         return $this->getValue('title');
     }
-    public function getTeaser() :string
+    public function getTeaser(): string
     {
         return $this->getValue('teaser');
     }
-    public function getDescription() :string
+    public function getDescription(): string
     {
         return $this->getValue('description');
     }
-    public function getProfile() :string
+    public function getProfile(): string
     {
         return $this->getValue('profile');
     }
-    public function getDatePosted() :string
+    public function getDatePosted(): string
     {
         return $this->getValue('createdate');
     }
-    public function getDatePostedFormatted() :string
+    public function getDatePostedFormatted(): string
     {
         return $this->getValue('createdate');
     }
-    public function getEmploymentType() :string
+    public function getEmploymentType(): string
     {
         return $this->getValue('employment_type');
     }
-    public function getEmploymentTypeFormatted() :string
+    public function getEmploymentTypeFormatted(): string
     {
         $options_selected = explode(",", $this->getValue('employment_type'));
 
@@ -48,27 +49,27 @@ class stellenangebote extends \rex_yform_manager_dataset
         }
         return implode(", ", $labels_selected);
     }
-    public function jobLocationType() :string
+    public function jobLocationType(): string
     {
         return $this->getValue('telecommute');
     }
-    public function getValidThrough() :string
+    public function getValidThrough(): string
     {
         return $this->getValue('valid_through');
     }
-    public function getValidThroughFormatted() :string
+    public function getValidThroughFormatted(): string
     {
         return $this->getValue('valid_through');
     }
-    public function getImage() :string
+    public function getImage(): string
     {
         return $this->getValue('image');
     }
-    public function getDirectApply() :string
+    public function getDirectApply(): string
     {
         return $this->getValue('direct_apply');
     }
-    
+
     public function getLocations()
     {
         if ($this->locations == null) {
@@ -80,14 +81,14 @@ class stellenangebote extends \rex_yform_manager_dataset
     public function getLocationNames()
     {
         $location_list = [];
-        
+
         foreach($this->getLocations() as $location) {
             $location_list[] =  $location->getLocality();
         };
         return implode(", ", $location_list);
     }
 
-    public function getContact()
+    public function getContact(): ?rex_yform_manager_dataset
     {
         if ($this->contact == null) {
             $this->contact = $this->getRelatedDataset('contact');
@@ -101,28 +102,28 @@ class stellenangebote extends \rex_yform_manager_dataset
         return $fragment->parse('stellenangebote/apply.php');
     }
 
-    public static function getByArticleId($id)
+    public static function getByArticleId($id): ?rex_yform_manager_dataset
     {
         return self::query()->where('article_id', $id)->findOne();
     }
-    
-    public function getUrl() :string
+
+    public function getUrl(): string
     {
         if ($this->getValue('article_id')) {
             return rex_yrewrite::getFullUrlByArticleId($this->getValue('article_id'));
         }
         return rex_yrewrite::getFullUrlByArticleId();
     }
-    
-    public function getCategory() : ?stellenangebote_category
+
+    public function getCategory(): ?stellenangebote_category
     {
         return $this->getRelatedDataset('category_id');
     }
-    public function getCategoryName() :string
+    public function getCategoryName(): string
     {
         return $this->getCategory()->getName();
     }
-    public function getCategoryIcon() :string
+    public function getCategoryIcon(): string
     {
         return $this->getCategory()->getIcon();
     }
@@ -140,51 +141,51 @@ class stellenangebote extends \rex_yform_manager_dataset
         });
     }
 
-    public static function findOnline($limit = 6)
+    public static function findOnline($limit = 6): ?rex_yform_manager_collection
     {
 
         return stellenangebote::query()->where("status", 1, '>=')->limit($limit)->find();
 
     }
 
-    public function getShareMailHref() :string
+    public function getShareMailHref(): string
     {
         return 'mailto:?subject=' . urlencode(rex_article::getCurrent()->getName()) . '&body=' . urlencode($this->getUrl()) . '%0AIst%20diese%20Stelle%20f%C3%BCr%20dich%20interessant?';
     }
-    public function getShareFacebookHref() :string
+    public function getShareFacebookHref(): string
     {
-        return "https://www.facebook.com/sharer/sharer.php?u=". $this->getUrl();
+        return "https://www.facebook.com/sharer/sharer.php?u=" . $this->getUrl();
     }
-    public function getShareLinkedInHref() :string
+    public function getShareLinkedInHref(): string
     {
-        return "https://www.linkedin.com/sharing/share-offsite/?url=".$this->getUrl();
+        return "https://www.linkedin.com/sharing/share-offsite/?url=" . $this->getUrl();
     }
-    public function getShareTwitterHref() :string
+    public function getShareTwitterHref(): string
     {
         return "";
     }
 
-    public function getShareWhatsAppHref()
+    public function getShareWhatsAppHref(): string
     {
-        return "https://api.whatsapp.com/send?text=". urlencode($this->getUrl());
+        return "https://api.whatsapp.com/send?text=" . urlencode($this->getUrl());
     }
 
-    public function getBenefitsIds() :string
+    public function getBenefitsIds(): string
     {
         return $this->getValue('benefits');
     }
-    
-    public function getBenefits()
+
+    public function getBenefits(): ?rex_yform_manager_collection
     {
         return stellenangebote_benefits::findBySet($this->getBenefitsIds());
     }
 
-    public static function getConfig($key ="") :mixed
+    public static function getConfig($key = ""): mixed
     {
         return rex_config::get('stellenangebote', $key);
     }
 
-    public static function setConfig($key ="", $value) :mixed
+    public static function setConfig($key = "", $value): mixed
     {
         return rex_config::set('stellenangebote', $key, $value);
     }
