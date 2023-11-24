@@ -9,7 +9,9 @@ stellenangebote_contact = Ansprechpersonen
 stellenangebote_location = Standorte
 stellenangebote_entry = Stellenangebote
 
+stellenangebote_apply = Bewerbungen
 stellenangebote_apply_message = Bewerber:innen
+stellenangebote_apply_custom = Umfrage
 
 # Structure Content Page
 stellenangebote_content_page_title = Stellenangebot
@@ -17,8 +19,16 @@ stellenangebote_category_id = Beschränke auf Kategorie
 
 # Konfigurationsformulare
 stellenangebote_config = Einstellungen
+stellenangebote_config_company_text_label = Unternehmens-Text
+stellenangebote_config_company_email_signature_label = E-Mail-Signatur
 stellenangebote_config_company_name_label = Unternehmens-Name
 stellenangebote_config_company_name_notice = Name des suchenden Unternehmens
+
+stellenangebote_apply_value_id = Bewerbungsseite
+
+stellenangebote_config_url_kununu = Kununu-URL
+stellenangebote_config_url_xing = Xing-URL
+stellenangebote_config_url_linkedin = LinkedIn-URL
 
 stellenangebote_config_company_url_label = Unternehmens-Website
 stellenangebote_config_company_url_notice = Adresse des Unternehmens (Startartikel in REDAXO auswählen)
