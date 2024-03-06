@@ -22,6 +22,10 @@ class stellenangebote_contact extends \rex_yform_manager_dataset
     {
         return $this->getValue('photo');
     }
+    public function getDescription(): string
+    {
+        return $this->getValue('description');
+    }
     public function getMedia(): rex_media
     {
         if($media = rex_media::get($this->getValue('photo'))) {
