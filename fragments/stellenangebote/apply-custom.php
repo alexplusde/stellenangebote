@@ -25,18 +25,18 @@
 
 			# Ausfüllbare Felder
 			$yform->setValueField('fieldset', ['fieldset_job','Mir ist wichtig im Job, dass ...','','onlyopen']);
-			$yform->setValueField('choice', ['job_question_1','...ich meine Arbeitszeit genau planen kann.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
-			$yform->setValueField('choice', ['job_question_2','... ich meine Arbeitsschwerpunkte selbst bestimmen kann.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
-			$yform->setValueField('choice', ['job_question_3','... ich während der Arbeit flexibel familiäre Aufgaben berücksichtigen kann.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
-			$yform->setValueField('choice', ['job_question_4','...mein Gehalt mit der Betriebszugehörigkeit steigt.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
-			$yform->setValueField('choice', ['job_question_5','... das Unternehmen auf meine Gesundheit achtet.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
+			$yform->setValueField('choice', ['job_question_1','...ich meine Arbeitszeit genau planen kann.','sehr wichtig=5,wichtig=4,teils teils=3,eher unwichtig=2,sehr unwichtig=1','1','0','','','','','','','','','0']);
+			$yform->setValueField('choice', ['job_question_2','... ich meine Arbeitsschwerpunkte selbst bestimmen kann.','sehr wichtig=5,wichtig=4,teils teils=3,eher unwichtig=2,sehr unwichtig=1','1','0','','','','','','','','','0']);
+			$yform->setValueField('choice', ['job_question_3','... ich während der Arbeit flexibel familiäre Aufgaben berücksichtigen kann.','sehr wichtig=5,wichtig=4,teils teils=3,eher unwichtig=2,sehr unwichtig=1','1','0','','','','','','','','','0']);
+			$yform->setValueField('choice', ['job_question_4','...mein Gehalt mit der Betriebszugehörigkeit steigt.','sehr wichtig=5,wichtig=4,teils teils=3,eher unwichtig=2,sehr unwichtig=1','1','0','','','','','','','','','0']);
+			$yform->setValueField('choice', ['job_question_5','... das Unternehmen auf meine Gesundheit achtet.','sehr wichtig=5,wichtig=4,teils teils=3,eher unwichtig=2,sehr unwichtig=1','1','0','','','','','','','','','0']);
 			$yform->setValueField('fieldset', ['fieldset_job_close','','','onlyclose']);
 			$yform->setValueField('fieldset', ['fieldset_personal','Es ist mir persönlich ein wichtiger Wert, dass ...','','onlyopen']);
-			$yform->setValueField('choice', ['personal_question_1','...meine Arbeit mir Spaß macht.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
-			$yform->setValueField('choice', ['personal_question_2','... ich anderen Menschen durch meine Arbeit helfen kann.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
-			$yform->setValueField('choice', ['personal_question_3','... ich stets aus unterschiedlichen Aufgaben selbständig auswählen kann.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
-			$yform->setValueField('choice', ['personal_question_4','...meine Arbeit mich herausfordert und mir Chancen zur beruflichen Weiterentwicklung bietet.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
-			$yform->setValueField('choice', ['personal_question_5','... ich tolerant gegenüber vielen verschiedenen Menschen und gesellschaftlichen Gruppen bin.','sehr wichtig=2,wichtig=1,teils teils=0,eher unwichtig=-1,sehr unwichtig=-2','1','0','','','','','','','','','0']);
+			$yform->setValueField('choice', ['personal_question_1','...meine Arbeit mir Spaß macht.','sehr wichtig=5,wichtig=4,teils teils=3,eher unwichtig=2,sehr unwichtig=1','1','0','','','','','','','','','0']);
+			$yform->setValueField('choice', ['personal_question_2','... ich anderen Menschen durch meine Arbeit helfen kann.','sehr wichtig=5,wichtig=4,teils teils=3,eher unwichtig=2,sehr unwichtig=1','1','0','','','','','','','','','0']);
+			$yform->setValueField('choice', ['personal_question_3','... ich stets aus unterschiedlichen Aufgaben selbständig auswählen kann.','sehr wichtig=5,wichtig=4,teils teils=3,eher unwichtig=2,sehr unwichtig=1','1','0','','','','','','','','','0']);
+			$yform->setValueField('choice', ['personal_question_4','...meine Arbeit mich herausfordert und mir Chancen zur beruflichen Weiterentwicklung bietet.','sehr wichtig=5,wichtig=4,teils teils=3,eher unwichtig=2,sehr unwichtig=1','1','0','','','','','','','','','0']);
+			$yform->setValueField('choice', ['personal_question_5','... ich tolerant gegenüber vielen verschiedenen Menschen und gesellschaftlichen Gruppen bin.','sehr wichtig=5,wichtig=4,teils teils=3,eher unwichtig=2,sehr unwichtig=1','1','0','','','','','','','','','0']);
 			$yform->setValueField('fieldset', ['fieldset_personal_close','','','onlyclose']);
 
 			$yform->setValueField('html', ['', '</div><div class="col col-12 col-md-6">']);

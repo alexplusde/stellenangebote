@@ -25,15 +25,15 @@ $locations = $stellenangebot->getLocations();
 					</div>
 					<div class="col-12 col-lg-5 offset-lg-1 p-4">
 						<?php
-						foreach($locations as $location) {
-							?>
+			            foreach($locations as $location) {
+			                ?>
 							<strong	class="job-detail-infoboard-content-headline"><?= $location->getName(); ?></strong>
 							<address class="job-detail-infoboard-content-text"><?= $location->getStreet(); ?><br><?= $location->getZip(); ?> <?= $location->getLocality(); ?></address>
 							<a class="job-detail-infoboard-content-link" href="http://maps.google.de/maps?q=<?= $location->getStreet(); ?>, <?= $location->getZip(); ?> <?= $location->getLocality(); ?>" target="_blank" rel="noreferrer noopener">Auf Karte anzeigen</a>
 							<p>&nbsp;</p>
 							<?php
-						}
-						?>
+			            }
+?>
 					</div>
 				</div>
 			</div>

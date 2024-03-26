@@ -1,12 +1,12 @@
 <?php
 #######################################################################
 # Dieses Modul wird über das Addon plus_bs5 verwaltet und geupdatet.
-# Um das Modul zu entkoppeln, ändere den Modul-Key in REDAXO. Um die 
+# Um das Modul zu entkoppeln, ändere den Modul-Key in REDAXO. Um die
 # Ausgabe zu verändern, genügt es, das passende Fragment zu überschreiben.
 #######################################################################
 
 if (!bs5::packageExists('stellenangebote, redactor, media_manager_responsive')) {
-  return;
+    return;
 };
 
 $output = new bs5_fragment();
