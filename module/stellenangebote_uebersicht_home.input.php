@@ -1,12 +1,12 @@
 <?php
 #######################################################################
 # Dieses Modul wird über das Addon stellenangebote verwaltet und geupdatet.
-# Um das Modul zu entkoppeln, ändere den Modul-Key in REDAXO. Um die 
+# Um das Modul zu entkoppeln, ändere den Modul-Key in REDAXO. Um die
 # Ausgabe zu verändern, genügt es, das passende Fragment zu überschreiben.
 #######################################################################
 
 if (!bs5::packageExists('stellenangebote, redactor, media_manager_responsive')) {
-  return;
+    return;
 };
 
 $mform = MForm::factory();
@@ -15,9 +15,9 @@ $mform->addFieldsetArea('');
 
 $mform->addTextField(1, ['label' => 'Titel']);
 
-$mform->addSelectField(2, ['h1' => 'Seite', 
-'h2' => 'Ebene 2', 
-'h3' => 'Ebene 3', 
+$mform->addSelectField(2, ['h1' => 'Seite',
+'h2' => 'Ebene 2',
+'h3' => 'Ebene 3',
 'h4' => 'Ebene 4'], ['label' => 'Ebene']);
 
 $mform->addTextAreaField(4, ['label' => 'Text','class' => rex_config::get('plus_bs5', 'editor')]);
