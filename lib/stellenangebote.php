@@ -1,38 +1,266 @@
-<?php
+<?php 
+class stellenangebote extends \rex_yform_manager_dataset {
+	
+    /* Titel */
+    /** @api */
+    public function getTitle() : ?string {
+        return $this->getValue("title");
+    }
+    /** @api */
+    public function setTitle(mixed $value) : self {
+        $this->setValue("title", $value);
+        return $this;
+    }
 
-class stellenangebote extends \rex_yform_manager_dataset
-{
-    private $locations = null;
-    private $contact = null;
+    /* Untertitel */
+    /** @api */
+    public function getSubtitle() : ?string {
+        return $this->getValue("subtitle");
+    }
+    /** @api */
+    public function setSubtitle(mixed $value) : self {
+        $this->setValue("subtitle", $value);
+        return $this;
+    }
 
-    public function getTitle(): string
-    {
-        return $this->getValue('title');
+    /* Hervorheben? */
+    /** @api */
+    public function getFeatured(bool $asBool = false) : mixed {
+        if($asBool) {
+            return (bool) $this->getValue("featured");
+        }
+        return $this->getValue("featured");
     }
-    public function getTeaser(): string
-    {
-        return $this->getValue('teaser');
+    /** @api */
+    public function setFeatured(int $value = 1) : self {
+        $this->setValue("featured", $value);
+        return $this;
     }
-    public function getDescription(): string
-    {
-        return $this->getValue('description');
+            
+    /* Titelbild */
+    /** @api */
+    public function getImage(bool $asMedia = false) : mixed {
+        if($asMedia) {
+            return rex_media::get($this->getValue("image"));
+        }
+        return $this->getValue("image");
     }
-    public function getProfile(): string
-    {
-        return $this->getValue('profile');
+    /** @api */
+    public function setImage(string $filename) : self {
+        if(rex_media::get($filename)) {
+            $this->getValue("image", $filename);
+        }
+        return $this;
     }
+            
+    /* Intro-Video */
+    /** @api */
+    public function getVideo(bool $asMedia = false) : mixed {
+        if($asMedia) {
+            return rex_media::get($this->getValue("video"));
+        }
+        return $this->getValue("video");
+    }
+    /** @api */
+    public function setVideo(string $filename) : self {
+        if(rex_media::get($filename)) {
+            $this->getValue("video", $filename);
+        }
+        return $this;
+    }
+            
+    /* Teaser */
+    /** @api */
+    public function getTeaser(bool $asPlaintext = false) : ?string {
+        if($asPlaintext) {
+            return strip_tags($this->getValue("teaser"));
+        }
+        return $this->getValue("teaser");
+    }
+    /** @api */
+    public function setTeaser(mixed $value) : self {
+        $this->setValue("teaser", $value);
+        return $this;
+    }
+            
+    /* Art */
+    /** @api */
+    public function getEmploymentType() : ?string {
+        return $this->getValue("employment_type");
+    }
+    /** @api */
+    public function setEmploymentType(mixed $value) : self {
+        $this->setValue("employment_type", $value);
+        return $this;
+    }
+
+    /* 100% Home Office */
+    /** @api */
+    public function getTelecommute(bool $asBool = false) : mixed {
+        if($asBool) {
+            return (bool) $this->getValue("telecommute");
+        }
+        return $this->getValue("telecommute");
+    }
+    /** @api */
+    public function setTelecommute(int $value = 1) : self {
+        $this->setValue("telecommute", $value);
+        return $this;
+    }
+            
+    /* Vorteile */
+    /** @api */
+    public function getBenefits() : ?rex_yform_manager_dataset {
+        return $this->getRelatedDataset("benefits");
+    }
+
+    /* Status */
+    /** @api */
+    public function getStatus() : mixed {
+        return $this->getValue("status");
+    }
+    /** @api */
+    public function setStatus(mixed $param) : mixed {
+        $this->setValue("status", $param);
+        return $this;
+    }
+
+    /* Ansprechperson */
+    /** @api */
+    public function getContact() : ?stellenangebote_contact {
+        return $this->getRelatedDataset("contact");
+    }
+
+    /* Standorte */
+    /** @api */
+    public function getLocation() : ?rex_yform_manager_dataset {
+        return $this->getRelatedDataset("location");
+    }
+
+    /* Kategorie */
+    /** @api */
+    public function getCategoryId() : ?int {
+        return $this->getRelatedDataset("category_id")->getId();
+    }
+
+    /* Bewerbungsfrist */
+    /** @api */
+    public function getValidThrough() : ?\DateTime {
+        return $this->getValue("valid_through");
+    }
+    /** @api */
+    public function setValidThrough(mixed $value) : self {
+        $this->setValue("valid_through", $value);
+        return $this;
+    }
+
+    /* Weiterleiten */
+    /** @api */
+    public function getArticleId(bool $asArticle = false) : ?rex_article {
+        return rex_article::get($this->getValue("article_id"));
+    }
+    public function getArticleIdId() : ?int {
+        return $this->getValue("article_id");
+    }
+    public function getArticleIdUrl() : ?string {
+        if($article = $this->getArticleId()) {
+            return $article->getUrl();
+        }
+    }
+    /** @api */
+    public function setArticleId(string $id) : self {
+        if(rex_article::get($id)) {
+            $this->getValue("article_id", $id);
+        }
+        return $this;
+    }
+
+    /* Bewerbungsformular anzeigen */
+    /** @api */
+    public function getDirectApply(bool $asBool = false) : mixed {
+        if($asBool) {
+            return (bool) $this->getValue("direct_apply");
+        }
+        return $this->getValue("direct_apply");
+    }
+    /** @api */
+    public function setDirectApply(int $value = 1) : self {
+        $this->setValue("direct_apply", $value);
+        return $this;
+    }
+            
+    /* Beschreibung (Aufgaben) */
+    /** @api */
+    public function getDescription(bool $asPlaintext = false) : ?string {
+        if($asPlaintext) {
+            return strip_tags($this->getValue("description"));
+        }
+        return $this->getValue("description");
+    }
+    /** @api */
+    public function setDescription(mixed $value) : self {
+        $this->setValue("description", $value);
+        return $this;
+    }
+            
+    /* Beschreibung (Profil) */
+    /** @api */
+    public function getProfile(bool $asPlaintext = false) : ?string {
+        if($asPlaintext) {
+            return strip_tags($this->getValue("profile"));
+        }
+        return $this->getValue("profile");
+    }
+    /** @api */
+    public function setProfile(mixed $value) : self {
+        $this->setValue("profile", $value);
+        return $this;
+    }
+            
+    /* zuletzt geändert */
+    /** @api */
+    public function getUpdatedate() : ?string {
+        return $this->getValue("updatedate");
+    }
+    /** @api */
+    public function setUpdatedate(string $value) : self {
+        $this->setValue("updatedate", $value);
+        return $this;
+    }
+
+    /* Erstelldatum */
+    /** @api */
+    public function getCreatedate() : ?string {
+        return $this->getValue("createdate");
+    }
+    /** @api */
+    public function setCreatedate(string $value) : self {
+        $this->setValue("createdate", $value);
+        return $this;
+    }
+    /**
+     * @deprecated This method is deprecated and will be removed in future versions.
+     */
     public function getDatePosted(): string
     {
         return $this->getValue('createdate');
     }
+
+    /**
+     * @deprecated This method is deprecated and will be removed in future versions.
+     */
     public function getDatePostedFormatted(): string
     {
         return $this->getValue('createdate');
     }
-    public function getEmploymentType(): string
+    /**
+     * @deprecated This method is deprecated and will be removed in future versions.
+     */
+    public function getValidThroughFormatted(): string
     {
-        return $this->getValue('employment_type');
+        return $this->getValue('valid_through');
     }
+    
     public function getEmploymentTypeFormatted(): string
     {
         $options_selected = explode(",", $this->getValue('employment_type'));
@@ -53,29 +281,10 @@ class stellenangebote extends \rex_yform_manager_dataset
     {
         return $this->getValue('telecommute');
     }
-    public function getValidThrough(): string
-    {
-        return $this->getValue('valid_through');
-    }
-    public function getValidThroughFormatted(): string
-    {
-        return $this->getValue('valid_through');
-    }
-    public function getImage(): string
-    {
-        return $this->getValue('image');
-    }
-    public function getDirectApply(): string
-    {
-        return $this->getValue('direct_apply');
-    }
 
-    public function getLocations()
+    public function getLocations() : ?rex_yform_manager_collection
     {
-        if ($this->locations == null) {
-            $this->locations = $this->getRelatedCollection('location');
-        }
-        return $this->locations;
+        return  $this->getRelatedCollection('location');
     }
 
     public function getLocationNames()
@@ -83,17 +292,10 @@ class stellenangebote extends \rex_yform_manager_dataset
         $location_list = [];
 
         foreach($this->getLocations() as $location) {
+            /** @var stellenangebot_collection $location */
             $location_list[] =  $location->getLocality();
         };
         return implode(", ", $location_list);
-    }
-
-    public function getContact(): ?rex_yform_manager_dataset
-    {
-        if ($this->contact == null) {
-            $this->contact = $this->getRelatedDataset('contact');
-        }
-        return $this->contact;
     }
 
     public function getApplyForm()
@@ -175,11 +377,6 @@ class stellenangebote extends \rex_yform_manager_dataset
         return $this->getValue('benefits');
     }
 
-    public function getBenefits(): ?rex_yform_manager_collection
-    {
-        return stellenangebote_benefits::findBySet($this->getBenefitsIds());
-    }
-
     public static function getConfig($key = ""): mixed
     {
         return rex_config::get('stellenangebote', $key);
@@ -189,7 +386,5 @@ class stellenangebote extends \rex_yform_manager_dataset
     {
         return rex_config::set('stellenangebote', $key, $value);
     }
-
-
-
+    
 }
