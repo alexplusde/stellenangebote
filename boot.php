@@ -49,7 +49,6 @@ if (rex::isBackend() && rex::isDebugMode() && rex_config::get('plus_bs5', 'dev')
     bs5::writeModule("stellenangebote", 'stellenangebote/%');
     bs5::writeTemplate("stellenangebote", 'stellenangebote/%');
 }
-
 //schönere Tabellendarstellung
 
 if (rex::isBackend()) {
@@ -57,7 +56,6 @@ if (rex::isBackend()) {
 
         //Kursanmeldungen
         if ($ep->getParam('table')->getTableName() == "rex_stellenangebote") {
-
             $list = $ep->getSubject();
             $list->setColumnFormat(
                 'title',
@@ -66,16 +64,15 @@ if (rex::isBackend()) {
                     $output = [];
 
                     $output[] = '<strong>'.$a['list']->getValue('title').'</strong>';
-                    
+
                     if($a['list']->getValue('subtitle')) {
                         $output[] = $a['list']->getValue('subtitle');
                     }
 
-                    if(rex_article::get($a['list']->getValue('article_id'))) {
+                    if($a['list']->getValue('article_id') && rex_article::get($a['list']->getValue('article_id'))) {
                         $output[] = '🔗 <a href="'.rex_article::get($a['list']->getValue('article_id'))->getUrl().'>Zum Artikel</a>';
                     }
-
-                    if(stellenangebote_category::get($a['list']->getValue('category_id'))) {
+                    if($a['list']->getValue('category_id') && stellenangebote_category::get($a['list']->getValue('category_id'))) {
                         $output[] = "📁 " . stellenangebote_category::get($a['list']->getValue('category_id'))->getValue('name');
                     }
 
@@ -99,11 +96,10 @@ if (rex::isBackend()) {
                     if(count($employment_badges) > 0) {
                         $output[] = implode(" ", $employment_badges);
                     }
-                    
+
                     return implode('<br>', $output);
                 }
             );
-
 
             $list->setColumnFormat(
                 'benefits',
@@ -124,12 +120,12 @@ if (rex::isBackend()) {
                     if(count($benefits_badges) > 0) {
                         $output[] = implode(" ", $benefits_badges);
                     }
-                    
+
                     return implode('<br>', $output);
                 }
             );
 
-
+            
             $list->removeColumn('subtitle');
             $list->removeColumn('id');
             $list->removeColumn('prio');
