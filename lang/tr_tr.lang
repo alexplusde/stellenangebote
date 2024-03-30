@@ -1,0 +1,54 @@
+stellenangebote_title = İş İlanları
+
+# Backend-Pages
+stellenangebote_docs = Yardım
+stellenangebote_settings = Ayarlar
+stellenangebote_benefits = Avantajlar
+stellenangebote_category = Kategoriler
+stellenangebote_contact = İletişim Kişileri
+stellenangebote_location = Konumlar
+stellenangebote_entry = İş İlanları
+
+stellenangebote_apply = Başvurular
+stellenangebote_apply_message = Adaylar
+stellenangebote_apply_custom = Anket
+
+# Structure Content Page
+stellenangebote_content_page_title = İş İlanı
+stellenangebote_category_id = Kategoriye Göre Sınırla
+
+# Configuration Forms
+stellenangebote_config = Ayarlar
+stellenangebote_config_company_text_label = Şirket Metni
+stellenangebote_config_company_email_signature_label = E-posta İmzası
+stellenangebote_config_company_name_label = Şirket Adı
+stellenangebote_config_company_name_notice = Arayan şirketin adı
+
+stellenangebote_apply_value_id = Başvuru Sayfası
+
+stellenangebote_config_url_kununu = Kununu URL
+stellenangebote_config_url_xing = Xing URL
+stellenangebote_config_url_linkedin = LinkedIn URL
+
+stellenangebote_config_company_url_label = Şirket Web Sitesi
+stellenangebote_config_company_url_notice = Şirket adresi (REDAXO'da başlangıç makalesini seçin)
+
+stellenangebote_editor = Editör
+
+stellenangebote_demo = Demo Verileri İçe Aktar
+stellenangebote_demo_notice = 2 YForm e-posta şablonu oluşturur ve birkaç sahte iş ilanı ekler, iletişim kişisi ve konum dahil.
+
+# Commissioning Note
+stellenangebote_info_donate = REDAXO topluluğundaki çoğu eklenti gibi, bu eklentinin oluşturulması ve daha fazla geliştirilmesi kendi projeler tarafından karşılanmamaktadır. Bir komisyonla, geliştirmeyi geriye dönük olarak finanse edebilir ve ek özelliklerin daha fazla geliştirilmesini ve geliştirilmiş bir kılavuzun sağlanmasını sağlayabilirsiniz.
+stellenangebote_donate = Daha Fazla Geliştirmeyi Destekle
+
+# Docs
+stellenangebote_docs_intro = Giriş
+stellenangebote_docs_stellenangebote = İş İlanı
+stellenangebote_docs_stellenangebote_category = Kategori
+stellenangebote_docs_stellenangebote_benefits = Avantajlar
+stellenangebote_docs_stellenangebote_location = Konumlar
+stellenangebote_docs_stellenangebote_contact = İletişim Kişileri
+stellenangebote_docs_stellenangebote_apply = Başvurular
+stellenangebote_docs_settings = Ayarlar
+stellenangebote_docs_fragments = Parçalar

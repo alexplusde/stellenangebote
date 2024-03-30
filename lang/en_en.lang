@@ -1,0 +1,54 @@
+stellenangebote_title = Job Offers
+
+# Backend-Pages
+stellenangebote_docs = Help
+stellenangebote_settings = Settings
+stellenangebote_benefits = Benefits
+stellenangebote_category = Categories
+stellenangebote_contact = Contacts
+stellenangebote_location = Locations
+stellenangebote_entry = Job Offers
+
+stellenangebote_apply = Applications
+stellenangebote_apply_message = Applicants
+stellenangebote_apply_custom = Survey
+
+# Structure Content Page
+stellenangebote_content_page_title = Job Offer
+stellenangebote_category_id = Restrict to Category
+
+# Configuration Forms
+stellenangebote_config = Settings
+stellenangebote_config_company_text_label = Company Text
+stellenangebote_config_company_email_signature_label = Email Signature
+stellenangebote_config_company_name_label = Company Name
+stellenangebote_config_company_name_notice = Name of the seeking company
+
+stellenangebote_apply_value_id = Application Page
+
+stellenangebote_config_url_kununu = Kununu URL
+stellenangebote_config_url_xing = Xing URL
+stellenangebote_config_url_linkedin = LinkedIn URL
+
+stellenangebote_config_company_url_label = Company Website
+stellenangebote_config_company_url_notice = Company address (select start article in REDAXO)
+
+stellenangebote_editor = Editor
+
+stellenangebote_demo = Import Demo Data
+stellenangebote_demo_notice = Creates 2 YForm email templates and adds a few fictitious job offers including contact person and location.
+
+# Commissioning Note
+stellenangebote_info_donate = Unlike most addons from the REDAXO community, the creation and further development of this addon is not covered by own projects. With a commission, you can finance the development retrospectively and secure the further development of additional features as well as an improved manual.
+stellenangebote_donate = Support Further Development
+
+# Docs
+stellenangebote_docs_intro = Introduction
+stellenangebote_docs_stellenangebote = Job Offer
+stellenangebote_docs_stellenangebote_category = Category
+stellenangebote_docs_stellenangebote_benefits = Benefits
+stellenangebote_docs_stellenangebote_location = Locations
+stellenangebote_docs_stellenangebote_contact = Contacts
+stellenangebote_docs_stellenangebote_apply = Applications
+stellenangebote_docs_settings = Settings
+stellenangebote_docs_fragments = Fragments
