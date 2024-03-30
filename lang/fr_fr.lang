@@ -1,0 +1,54 @@
+stellenangebote_title = Offres d'emploi
+
+# Backend-Pages
+stellenangebote_docs = Aide
+stellenangebote_settings = Paramètres
+stellenangebote_benefits = Avantages
+stellenangebote_category = Catégories
+stellenangebote_contact = Personnes de contact
+stellenangebote_location = Lieux
+stellenangebote_entry = Offres d'emploi
+
+stellenangebote_apply = Candidatures
+stellenangebote_apply_message = Candidat(e)s
+stellenangebote_apply_custom = Enquête
+
+# Structure Content Page
+stellenangebote_content_page_title = Offre d'emploi
+stellenangebote_category_id = Limiter à la catégorie
+
+# Configuration Forms
+stellenangebote_config = Paramètres
+stellenangebote_config_company_text_label = Texte de l'entreprise
+stellenangebote_config_company_email_signature_label = Signature de l'e-mail
+stellenangebote_config_company_name_label = Nom de l'entreprise
+stellenangebote_config_company_name_notice = Nom de l'entreprise recherchée
+
+stellenangebote_apply_value_id = Page de candidature
+
+stellenangebote_config_url_kununu = URL Kununu
+stellenangebote_config_url_xing = URL Xing
+stellenangebote_config_url_linkedin = URL LinkedIn
+
+stellenangebote_config_company_url_label = Site web de l'entreprise
+stellenangebote_config_company_url_notice = Adresse de l'entreprise (sélectionnez l'article de départ dans REDAXO)
+
+stellenangebote_editor = Éditeur
+
+stellenangebote_demo = Importer des données de démonstration
+stellenangebote_demo_notice = Crée 2 modèles d'e-mails YForm et ajoute quelques offres d'emploi fictives, y compris la personne de contact et le lieu.
+
+# Commissioning Note
+stellenangebote_info_donate = Contrairement à la plupart des addons de la communauté REDAXO, la création et le développement ultérieur de cet addon ne sont pas couverts par nos propres projets. Avec une commission, vous pouvez financer le développement rétroactivement et assurer le développement de fonctionnalités supplémentaires ainsi qu'un manuel amélioré.
+stellenangebote_donate = Soutenir le développement futur
+
+# Docs
+stellenangebote_docs_intro = Introduction
+stellenangebote_docs_stellenangebote = Offre d'emploi
+stellenangebote_docs_stellenangebote_category = Catégorie
+stellenangebote_docs_stellenangebote_benefits = Avantages
+stellenangebote_docs_stellenangebote_location = Lieux
+stellenangebote_docs_stellenangebote_contact = Personnes de contact
+stellenangebote_docs_stellenangebote_apply = Candidatures
+stellenangebote_docs_settings = Paramètres
+stellenangebote_docs_fragments = Fragments

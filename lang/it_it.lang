@@ -1,0 +1,56 @@
+stellenangebote_title = Offerte di lavoro
+
+# Backend-Pages
+stellenangebote_docs = Aiuto
+stellenangebote_settings = Impostazioni
+stellenangebote_benefits = Vantaggi
+stellenangebote_category = Categorie
+stellenangebote_contact = Contatti
+stellenangebote_location = Luoghi
+stellenangebote_entry = Offerte di lavoro
+
+stellenangebote_apply = Candidature
+stellenangebote_apply_message = Candidati
+stellenangebote_apply_custom = Sondaggio
+
+# Structure Content Page
+stellenangebote_content_page_title = Offerta di lavoro
+stellenangebote_category_id = Limita alla categoria
+
+# Konfigurationsformulare
+stellenangebote_config = Impostazioni
+stellenangebote_config_company_text_label = Testo dell'azienda
+stellenangebote_config_company_email_signature_label = Firma email
+stellenangebote_config_company_name_label = Nome dell'azienda
+stellenangebote_config_company_name_notice = Nome dell'azienda in cerca
+
+stellenangebote_apply_value_id = Pagina di candidatura
+
+stellenangebote_config_url_kununu = URL Kununu
+stellenangebote_config_url_xing = URL Xing
+stellenangebote_config_url_linkedin = URL LinkedIn
+
+stellenangebote_config_company_url_label = Sito web dell'azienda
+stellenangebote_config_company_url_notice = Indirizzo dell'azienda (seleziona l'articolo iniziale in REDAXO)
+
+stellenangebote_editor = Editor
+
+stellenangebote_demo = Importa dati demo
+stellenangebote_demo_notice = Crea 2 modelli di email YForm e aggiunge alcune offerte di lavoro fittizie, inclusi contatti e luoghi.
+
+# Beauftragungshinweis
+
+stellenangebote_info_donate = A differenza della maggior parte degli addon della comunità REDAXO, lo sviluppo e l'evoluzione di questo addon non sono coperti da progetti propri. Con un incarico, puoi finanziare retroattivamente lo sviluppo e garantire lo sviluppo di funzionalità aggiuntive e una guida migliorata.
+stellenangebote_donate = Supporta lo sviluppo
+
+# Docs
+
+stellenangebote_docs_intro = Introduzione
+stellenangebote_docs_stellenangebote = Offerta di lavoro
+stellenangebote_docs_stellenangebote_category = Categoria
+stellenangebote_docs_stellenangebote_benefits = Vantaggi
+stellenangebote_docs_stellenangebote_location = Luoghi
+stellenangebote_docs_stellenangebote_contact = Contatti
+stellenangebote_docs_stellenangebote_apply = Candidature
+stellenangebote_docs_settings = Impostazioni
+stellenangebote_docs_fragments = Frammenti
