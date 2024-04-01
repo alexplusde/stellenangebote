@@ -1,0 +1,56 @@
+stellenangebote_title = Stellenangebote
+
+# Backend-Pages
+stellenangebote_docs = Hilfe
+stellenangebote_settings = Einstellungen
+stellenangebote_benefits = Vorteile (Benefits)
+stellenangebote_category = Kategorien
+stellenangebote_contact = Ansprechpersonen
+stellenangebote_location = Standorte
+stellenangebote_entry = Stellenangebote
+
+stellenangebote_apply = Bewerbungen
+stellenangebote_apply_message = Bewerber:innen
+stellenangebote_apply_custom = Umfrage
+
+# Structure Content Page
+stellenangebote_content_page_title = Stellenangebot
+stellenangebote_category_id = Beschränke auf Kategorie
+
+# Konfigurationsformulare
+stellenangebote_config = Einstellungen
+stellenangebote_config_company_text_label = Unternehmens-Text
+stellenangebote_config_company_email_signature_label = E-Mail-Signatur
+stellenangebote_config_company_name_label = Unternehmens-Name
+stellenangebote_config_company_name_notice = Name des suchenden Unternehmens
+
+stellenangebote_apply_value_id = Bewerbungsseite
+
+stellenangebote_config_url_kununu = Kununu-URL
+stellenangebote_config_url_xing = Xing-URL
+stellenangebote_config_url_linkedin = LinkedIn-URL
+
+stellenangebote_config_company_url_label = Unternehmens-Website
+stellenangebote_config_company_url_notice = Adresse des Unternehmens (Startartikel in REDAXO auswählen)
+
+stellenangebote_editor = Editor
+
+stellenangebote_demo = Demo-Daten importieren
+stellenangebote_demo_notice = Erstellt 2 YForm-E-Mail-Templates und fügt ein paar fiktive Stellenangebote inkl. Ansprechperson und Standort ein.
+
+# Beauftragungshinweis
+
+stellenangebote_info_donate = Anders als die meisten Addons aus der REDAXO-Community ist die Entstehung und Weiterentwicklung dieses Addons nicht durch eigene Projekte gedeckt. Mit einer Beauftragung kannst du die Entwicklung rückwirkend finanzieren und sicherst die Weiterentwicklung zusätzlicher Features sowie eine verbesserte Anleitung. 
+stellenangebote_donate = Weiterentwicklung unterstützen 
+
+# Docs
+
+stellenangebote_docs_intro = Einführung
+stellenangebote_docs_stellenangebote = Stellenangebot
+stellenangebote_docs_stellenangebote_category = Kategorie
+stellenangebote_docs_stellenangebote_benefits = Vorteile
+stellenangebote_docs_stellenangebote_location = Standorte
+stellenangebote_docs_stellenangebote_contact = Ansprechpersonen
+stellenangebote_docs_stellenangebote_apply = Bewerbungen
+stellenangebote_docs_settings = Einstellungen
+stellenangebote_docs_fragments = Fragmente
