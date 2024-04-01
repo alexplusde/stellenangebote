@@ -25,7 +25,7 @@ $locations = $stellenangebot->getLocations();
 					</div>
 					<div class="col-12 col-lg-5 offset-lg-1 p-4">
 						<?php
-			            foreach($locations as $location) {
+			            foreach($locations ?? [] as $location) {
 			                ?>
 							<strong	class="job-detail-infoboard-content-headline"><?= $location->getName(); ?></strong>
 							<address class="job-detail-infoboard-content-text"><?= $location->getStreet(); ?><br><?= $location->getZip(); ?> <?= $location->getLocality(); ?></address>
