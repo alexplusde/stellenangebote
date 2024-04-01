@@ -1,6 +1,6 @@
 <?php
 
-$stellenangebot = stellenangebote::get($this->getVar("id"));
+$stellenangebot = FriendsOfRedaxo\Stellenangebote\Entry::get($this->getVar("id"));
 
 $stelle = [];
 $stelle["@context"] = "https://schema.org/";

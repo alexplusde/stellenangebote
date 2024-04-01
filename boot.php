@@ -1,29 +1,41 @@
 <?php
 
+namespace FriendsOfRedaxo\Stellenangebote;
+
+use rex_addon;
+use rex_config;
+use rex_yform_manager_dataset;
+use rex;
+use rex_extension;
+use rex_extension_point;
+use rex_be_controller;
+use rex_category;
+use rex_article;
+
 if (rex_addon::get('yform')->isAvailable() && !rex::isSafeMode()) {
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote',
-        stellenangebote::class
+        Entry::class
     );
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote_contact',
-        stellenangebote_contact::class
+        Contact::class
     );
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote_location',
-        stellenangebote_location::class
+        Location::class
     );
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote_apply',
-        stellenangebote_apply::class
+        Apply::class
     );
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote_benefits',
-        stellenangebote_benefits::class
+        Benefits::class
     );
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote_category',
-        stellenangebote_category::class
+        Category::class
     );
 }
 
@@ -37,17 +49,17 @@ if (rex::isBackend()) {
         if(rex_config::get('stellenangebote', 'category_id')) {
             $category = rex_category::get(rex_request('category_id', 'int'));
             if($category && $category->getClosest(fn (rex_category $cat) => rex_config::get('stellenangebote', 'category_id') == $cat->getId())) {
-                stellenangebote::addContentPage();
+                Entry::addContentPage();
             }
         } else {
-            stellenangebote::addContentPage();
+            Entry::addContentPage();
         }
     }
 }
 
 if (rex::isBackend() && rex::isDebugMode() && rex_config::get('plus_bs5', 'dev')) {
-    bs5::writeModule("stellenangebote", 'stellenangebote/%');
-    bs5::writeTemplate("stellenangebote", 'stellenangebote/%');
+    \bs5::writeModule("stellenangebote", 'stellenangebote/%');
+    \bs5::writeTemplate("stellenangebote", 'stellenangebote/%');
 }
 //schönere Tabellendarstellung
 
@@ -72,8 +84,8 @@ if (rex::isBackend()) {
                     if($a['list']->getValue('article_id') && rex_article::get($a['list']->getValue('article_id'))) {
                         $output[] = '🔗 <a href="'.rex_article::get($a['list']->getValue('article_id'))->getUrl().'>Zum Artikel</a>';
                     }
-                    if($a['list']->getValue('category_id') && stellenangebote_category::get($a['list']->getValue('category_id'))) {
-                        $output[] = "📁 " . stellenangebote_category::get($a['list']->getValue('category_id'))->getValue('name');
+                    if($a['list']->getValue('category_id') && Category::get($a['list']->getValue('category_id'))) {
+                        $output[] = "📁 " . Category::get($a['list']->getValue('category_id'))->getValue('name');
                     }
 
                     $employment_types = $array = [
@@ -111,7 +123,7 @@ if (rex::isBackend()) {
 
                     $benefits_badges = [];
                     foreach($benefits_ids as $benefits_id) {
-                        $benefit = stellenangebote_benefits::get($benefits_id);
+                        $benefit = Benefits::get($benefits_id);
                         if($benefit) {
                             $benefits_badges[] = '<span class="label label-success">'. $benefit->getName() .'</span>';
                         }

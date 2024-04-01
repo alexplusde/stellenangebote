@@ -1,5 +1,9 @@
 <?php
 
+namespace FriendsOfRedaxo\Stellenangebote;
+
+use rex_user;
+
 /**
  * Diese Klasse repräsentiert den Tätigkeits-Standort oder eine Filiale / Niederlassung zu einem Stellenangebot in der Datenbank.
  * Sie erbt von der Klasse rex_yform_manager_dataset und stellt Methoden zur Verfügung,
@@ -14,7 +18,7 @@
  *
  * @package stellenangebote
  */
-class stellenangebote_location extends \rex_yform_manager_dataset {
+class Location extends \rex_yform_manager_dataset {
 	
     /**
      * Gibt den Google Places Embed-Code des Standorts zurück.

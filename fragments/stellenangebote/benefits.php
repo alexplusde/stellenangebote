@@ -5,7 +5,7 @@
 
 			<?php
 
-            $benefits = stellenangebote_benefits::query()->find();
+            $benefits = FriendsOfRedaxo\Stellenangebote\Benefits::query()->find();
 
 			foreach ($benefits as $benefit) {
 

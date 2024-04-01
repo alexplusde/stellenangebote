@@ -1,5 +1,8 @@
 <?php 
-class stellenangebote_apply extends \rex_yform_manager_dataset {
+
+namespace FriendsOfRedaxo\Stellenangebote;
+
+class Apply extends \rex_yform_manager_dataset {
 	
     /* Bewerbung erfolgte am... */
     /** @api */

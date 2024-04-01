@@ -15,10 +15,10 @@ $context = new rex_context([
 
 $yform = new rex_yform();
 
-$stellenangebot = stellenangebote::getByArticleId($articleId);
+$stellenangebot = FriendsOfRedaxo\Stellenangebote\Entry::getByArticleId($articleId);
 
 if(!$stellenangebot) {
-    $stellenangebot = stellenangebote::create();
+    $stellenangebot = FriendsOfRedaxo\Stellenangebote\Entry::create();
     $is_new = 1;
 }
 

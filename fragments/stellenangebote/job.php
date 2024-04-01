@@ -1,5 +1,5 @@
 <?php
-stellenangebote::get($this->getVar("id"));
+FriendsOfRedaxo\Stellenangebote\Entry::get($this->getVar("id"));
 ?>
 <div class="stelleangebot">
 	<h1><?= $stellenangebot->getTitle() ?></h1>

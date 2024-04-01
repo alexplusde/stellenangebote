@@ -1,5 +1,9 @@
 <?php
 
+namespace FriendsOfRedaxo\Stellenangebote;
+
+use rex_media;
+
 /**
  * Diese Klasse repräsentiert die Kategorie eines Stellenangebots in der Datenbank.
  * Sie erbt von der Klasse rex_yform_manager_dataset und stellt Methoden zur Verfügung,
@@ -14,7 +18,7 @@
  *
  */
 
- class stellenangebote_category extends \rex_yform_manager_dataset {
+ class Category extends \rex_yform_manager_dataset {
 
     /**
      * Gibt das Icon (Bootstrap Icon-Bibliothek) der Kategorie zurück.
