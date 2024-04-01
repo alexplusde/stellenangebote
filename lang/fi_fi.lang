@@ -1,0 +1,56 @@
+stellenangebote_title = Työpaikkailmoitukset
+
+# Backend-Pages
+stellenangebote_docs = Apua
+stellenangebote_settings = Asetukset
+stellenangebote_benefits = Edut
+stellenangebote_category = Kategoriat
+stellenangebote_contact = Yhteyshenkilöt
+stellenangebote_location = Sijainnit
+stellenangebote_entry = Työpaikkailmoitukset
+
+stellenangebote_apply = Hakemukset
+stellenangebote_apply_message = Hakijat
+stellenangebote_apply_custom = Kysely
+
+# Structure Content Page
+stellenangebote_content_page_title = Työpaikkailmoitus
+stellenangebote_category_id = Rajoita kategoriaan
+
+# Konfigurationsformulare
+stellenangebote_config = Asetukset
+stellenangebote_config_company_text_label = Yrityksen teksti
+stellenangebote_config_company_email_signature_label = Sähköpostin allekirjoitus
+stellenangebote_config_company_name_label = Yrityksen nimi
+stellenangebote_config_company_name_notice = Etsivän yrityksen nimi
+
+stellenangebote_apply_value_id = Hakemussivu
+
+stellenangebote_config_url_kununu = Kununu-URL
+stellenangebote_config_url_xing = Xing-URL
+stellenangebote_config_url_linkedin = LinkedIn-URL
+
+stellenangebote_config_company_url_label = Yrityksen verkkosivusto
+stellenangebote_config_company_url_notice = Yrityksen osoite (valitse aloitusartikkeli REDAXO:ssa)
+
+stellenangebote_editor = Editori
+
+stellenangebote_demo = Tuo demo-tiedot
+stellenangebote_demo_notice = Luo 2 YForm-sähköpostimallia ja lisää muutamia kuvitteellisia työpaikkailmoituksia, mukaan lukien yhteyshenkilö ja sijainti.
+
+# Beauftragungshinweis
+
+stellenangebote_info_donate = Toisin kuin useimmat REDAXO-yhteisön lisäosat, tämän lisäosan luominen ja kehittäminen ei ole katettu omilla projekteilla. Tehtävänannon avulla voit rahoittaa kehitystä takautuvasti ja varmistaa lisäominaisuuksien kehittämisen sekä parannetun ohjeen. 
+stellenangebote_donate = Tukea jatkokehitystä 
+
+# Docs
+
+stellenangebote_docs_intro = Johdanto
+stellenangebote_docs_stellenangebote = Työpaikkailmoitus
+stellenangebote_docs_stellenangebote_category = Kategoria
+stellenangebote_docs_stellenangebote_benefits = Edut
+stellenangebote_docs_stellenangebote_location = Sijainnit
+stellenangebote_docs_stellenangebote_contact = Yhteyshenkilöt
+stellenangebote_docs_stellenangebote_apply = Hakemukset
+stellenangebote_docs_settings = Asetukset
+stellenangebote_docs_fragments = Fragmentit

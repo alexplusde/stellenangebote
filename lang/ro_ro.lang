@@ -1,0 +1,56 @@
+stellenangebote_title = Oferte de muncă
+
+# Backend-Pages
+stellenangebote_docs = Ajutor
+stellenangebote_settings = Setări
+stellenangebote_benefits = Beneficii
+stellenangebote_category = Categorii
+stellenangebote_contact = Persoane de contact
+stellenangebote_location = Locații
+stellenangebote_entry = Oferte de muncă
+
+stellenangebote_apply = Aplicații
+stellenangebote_apply_message = Candidați
+stellenangebote_apply_custom = Chestionar
+
+# Structure Content Page
+stellenangebote_content_page_title = Ofertă de muncă
+stellenangebote_category_id = Limitați la categorie
+
+# Konfigurationsformulare
+stellenangebote_config = Setări
+stellenangebote_config_company_text_label = Textul companiei
+stellenangebote_config_company_email_signature_label = Semnătura e-mailului
+stellenangebote_config_company_name_label = Numele companiei
+stellenangebote_config_company_name_notice = Numele companiei care caută
+
+stellenangebote_apply_value_id = Pagina de aplicare
+
+stellenangebote_config_url_kununu = URL-ul Kununu
+stellenangebote_config_url_xing = URL-ul Xing
+stellenangebote_config_url_linkedin = URL-ul LinkedIn
+
+stellenangebote_config_company_url_label = Site-ul companiei
+stellenangebote_config_company_url_notice = Adresa companiei (selectați articolul de început în REDAXO)
+
+stellenangebote_editor = Editor
+
+stellenangebote_demo = Importați datele demo
+stellenangebote_demo_notice = Creează 2 șabloane de e-mail YForm și adaugă câteva oferte de muncă fictive, inclusiv persoana de contact și locația.
+
+# Beauftragungshinweis
+
+stellenangebote_info_donate = Spre deosebire de majoritatea addon-urilor din comunitatea REDAXO, crearea și dezvoltarea acestui addon nu sunt acoperite de proiectele proprii. Cu o comandă, puteți finanța dezvoltarea retroactiv și asigurați dezvoltarea ulterioară a caracteristicilor suplimentare și a unui ghid îmbunătățit. 
+stellenangebote_donate = Sprijiniți dezvoltarea ulterioară 
+
+# Docs
+
+stellenangebote_docs_intro = Introducere
+stellenangebote_docs_stellenangebote = Ofertă de muncă
+stellenangebote_docs_stellenangebote_category = Categorie
+stellenangebote_docs_stellenangebote_benefits = Beneficii
+stellenangebote_docs_stellenangebote_location = Locații
+stellenangebote_docs_stellenangebote_contact = Persoane de contact
+stellenangebote_docs_stellenangebote_apply = Aplicații
+stellenangebote_docs_settings = Setări
+stellenangebote_docs_fragments = Fragment

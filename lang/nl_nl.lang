@@ -1,0 +1,56 @@
+stellenangebote_title = Vacatures
+
+# Backend-Pages
+stellenangebote_docs = Help
+stellenangebote_settings = Instellingen
+stellenangebote_benefits = Voordelen
+stellenangebote_category = Categorieën
+stellenangebote_contact = Contactpersonen
+stellenangebote_location = Locaties
+stellenangebote_entry = Vacatures
+
+stellenangebote_apply = Sollicitaties
+stellenangebote_apply_message = Sollicitanten
+stellenangebote_apply_custom = Enquête
+
+# Structure Content Page
+stellenangebote_content_page_title = Vacature
+stellenangebote_category_id = Beperk tot categorie
+
+# Konfigurationsformulare
+stellenangebote_config = Instellingen
+stellenangebote_config_company_text_label = Bedrijfstekst
+stellenangebote_config_company_email_signature_label = E-mailhandtekening
+stellenangebote_config_company_name_label = Bedrijfsnaam
+stellenangebote_config_company_name_notice = Naam van het zoekende bedrijf
+
+stellenangebote_apply_value_id = Sollicitatiepagina
+
+stellenangebote_config_url_kununu = Kununu-URL
+stellenangebote_config_url_xing = Xing-URL
+stellenangebote_config_url_linkedin = LinkedIn-URL
+
+stellenangebote_config_company_url_label = Bedrijfswebsite
+stellenangebote_config_company_url_notice = Adres van het bedrijf (selecteer startartikel in REDAXO)
+
+stellenangebote_editor = Editor
+
+stellenangebote_demo = Demo-gegevens importeren
+stellenangebote_demo_notice = Maakt 2 YForm e-mailtemplates en voegt enkele fictieve vacatures toe, inclusief contactpersoon en locatie.
+
+# Beauftragungshinweis
+
+stellenangebote_info_donate = In tegenstelling tot de meeste add-ons uit de REDAXO-community, wordt de creatie en verdere ontwikkeling van deze add-on niet gedekt door eigen projecten. Met een opdracht kun je de ontwikkeling met terugwerkende kracht financieren en zorg je voor de verdere ontwikkeling van extra functies en een verbeterde handleiding. 
+stellenangebote_donate = Ondersteun verdere ontwikkeling 
+
+# Docs
+
+stellenangebote_docs_intro = Introductie
+stellenangebote_docs_stellenangebote = Vacature
+stellenangebote_docs_stellenangebote_category = Categorie
+stellenangebote_docs_stellenangebote_benefits = Voordelen
+stellenangebote_docs_stellenangebote_location = Locaties
+stellenangebote_docs_stellenangebote_contact = Contactpersonen
+stellenangebote_docs_stellenangebote_apply = Sollicitaties
+stellenangebote_docs_settings = Instellingen
+stellenangebote_docs_fragments = Fragmenten

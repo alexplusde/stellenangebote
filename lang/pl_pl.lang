@@ -1,0 +1,56 @@
+stellenangebote_title = Oferty pracy
+
+# Backend-Pages
+stellenangebote_docs = Pomoc
+stellenangebote_settings = Ustawienia
+stellenangebote_benefits = Korzyści
+stellenangebote_category = Kategorie
+stellenangebote_contact = Osoby kontaktowe
+stellenangebote_location = Lokalizacje
+stellenangebote_entry = Oferty pracy
+
+stellenangebote_apply = Aplikacje
+stellenangebote_apply_message = Kandydaci
+stellenangebote_apply_custom = Ankieta
+
+# Structure Content Page
+stellenangebote_content_page_title = Oferta pracy
+stellenangebote_category_id = Ogranicz do kategorii
+
+# Konfigurationsformulare
+stellenangebote_config = Ustawienia
+stellenangebote_config_company_text_label = Tekst firmy
+stellenangebote_config_company_email_signature_label = Podpis e-mailowy
+stellenangebote_config_company_name_label = Nazwa firmy
+stellenangebote_config_company_name_notice = Nazwa firmy szukającej
+
+stellenangebote_apply_value_id = Strona aplikacji
+
+stellenangebote_config_url_kununu = URL Kununu
+stellenangebote_config_url_xing = URL Xing
+stellenangebote_config_url_linkedin = URL LinkedIn
+
+stellenangebote_config_company_url_label = Strona internetowa firmy
+stellenangebote_config_company_url_notice = Adres firmy (wybierz artykuł startowy w REDAXO)
+
+stellenangebote_editor = Edytor
+
+stellenangebote_demo = Importuj dane demo
+stellenangebote_demo_notice = Tworzy 2 szablony e-maili YForm i dodaje kilka fikcyjnych ofert pracy, w tym osobę kontaktową i lokalizację.
+
+# Beauftragungshinweis
+
+stellenangebote_info_donate = W przeciwieństwie do większości dodatków z społeczności REDAXO, tworzenie i rozwój tego dodatku nie jest pokrywane przez własne projekty. Zlecając, możesz sfinansować rozwój z mocą wsteczną i zapewnić dalszy rozwój dodatkowych funkcji oraz ulepszony przewodnik. 
+stellenangebote_donate = Wspieraj dalszy rozwój 
+
+# Docs
+
+stellenangebote_docs_intro = Wprowadzenie
+stellenangebote_docs_stellenangebote = Oferta pracy
+stellenangebote_docs_stellenangebote_category = Kategoria
+stellenangebote_docs_stellenangebote_benefits = Korzyści
+stellenangebote_docs_stellenangebote_location = Lokalizacje
+stellenangebote_docs_stellenangebote_contact = Osoby kontaktowe
+stellenangebote_docs_stellenangebote_apply = Aplikacje
+stellenangebote_docs_settings = Ustawienia
+stellenangebote_docs_fragments = Fragmenty

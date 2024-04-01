@@ -1,0 +1,56 @@
+stellenangebote_title = Jobbannonser
+
+# Backend-Pages
+stellenangebote_docs = Hjälp
+stellenangebote_settings = Inställningar
+stellenangebote_benefits = Fördelar
+stellenangebote_category = Kategorier
+stellenangebote_contact = Kontaktpersoner
+stellenangebote_location = Platser
+stellenangebote_entry = Jobbannonser
+
+stellenangebote_apply = Ansökningar
+stellenangebote_apply_message = Sökande
+stellenangebote_apply_custom = Undersökning
+
+# Structure Content Page
+stellenangebote_content_page_title = Jobbannons
+stellenangebote_category_id = Begränsa till kategori
+
+# Konfigurationsformulare
+stellenangebote_config = Inställningar
+stellenangebote_config_company_text_label = Företagstext
+stellenangebote_config_company_email_signature_label = E-postsignatur
+stellenangebote_config_company_name_label = Företagsnamn
+stellenangebote_config_company_name_notice = Namn på sökande företag
+
+stellenangebote_apply_value_id = Ansökningssida
+
+stellenangebote_config_url_kununu = Kununu-URL
+stellenangebote_config_url_xing = Xing-URL
+stellenangebote_config_url_linkedin = LinkedIn-URL
+
+stellenangebote_config_company_url_label = Företagswebbplats
+stellenangebote_config_company_url_notice = Företagets adress (välj startartikel i REDAXO)
+
+stellenangebote_editor = Redaktör
+
+stellenangebote_demo = Importera demo-data
+stellenangebote_demo_notice = Skapar 2 YForm e-postmallar och lägger till några fiktiva jobbannonser inklusive kontaktperson och plats.
+
+# Beauftragungshinweis
+
+stellenangebote_info_donate = Till skillnad från de flesta tillägg från REDAXO-gemenskapen, täcks inte skapandet och vidareutvecklingen av detta tillägg av egna projekt. Med en uppdrag kan du finansiera utvecklingen retroaktivt och säkerställa vidareutveckling av fler funktioner samt en förbättrad handledning. 
+stellenangebote_donate = Stöd vidareutveckling 
+
+# Docs
+
+stellenangebote_docs_intro = Introduktion
+stellenangebote_docs_stellenangebote = Jobbannons
+stellenangebote_docs_stellenangebote_category = Kategori
+stellenangebote_docs_stellenangebote_benefits = Fördelar
+stellenangebote_docs_stellenangebote_location = Platser
+stellenangebote_docs_stellenangebote_contact = Kontaktpersoner
+stellenangebote_docs_stellenangebote_apply = Ansökningar
+stellenangebote_docs_settings = Inställningar
+stellenangebote_docs_fragments = Fragment
