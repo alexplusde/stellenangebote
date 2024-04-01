@@ -7,7 +7,7 @@ $output->setVar("slice_id", "REX_SLICE_ID", false);
 $output->setVar("article_id", "REX_ARTICLE_ID", false);
 $output->setVar("modul_name", "REX_MODULE_KEY", false);
 
-$stellenangebot = stellenangebote::getByArticleId("REX_ARTICLE_ID");
+$stellenangebot = Entry::getByArticleId("REX_ARTICLE_ID");
 if(!$stellenangebot) {
 
     echo $output->parse("REX_MODULE_KEY"."-empty");
@@ -30,4 +30,3 @@ if(!$stellenangebot) {
 unset($output);
 
 ?>
-

@@ -11,7 +11,7 @@
 
 $limit = $this->getVar('limit');
 
-			$stellenangebote = stellenangebote::findOnline(100);
+			$stellenangebote = FriendsOfRedaxo\Stellenangebote\Entry::findOnline(100);
 
 			foreach($stellenangebote as $stellenangebot) {
 
