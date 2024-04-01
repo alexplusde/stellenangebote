@@ -7,7 +7,7 @@
 
             $benefits = FriendsOfRedaxo\Stellenangebote\Benefits::query()->find();
 
-			foreach ($benefits as $benefit) {
+			foreach ($benefits ?? [] as $benefit) {
 
 			    ?>
 

@@ -1,5 +1,5 @@
 <?php
-$stellenangebot = $this->getVar('stellenangebot');
+$Stellenangebot = $this->getVar('stellenangebot');
 ?>
 
 <div id="stellenangebote-details" class="module stellenangebote-details">
@@ -20,14 +20,14 @@ $stellenangebot = $this->getVar('stellenangebot');
 
 	<!-- Opt. Ansprechperseon -->
 	<?php
-        if($stellenangebot->getContact()) {
+        if($Stellenangebot->getContact()) {
             echo $this->subfragment('/stellenangebote/details-contact.php');
         }
 ?>
 
 	<!-- Opt.: Bewerberformular -->
 	<?php
-if($stellenangebot->getDirectApply()) {
+if($Stellenangebot->getDirectApply()) {
     echo $this->subfragment('/stellenangebote/apply.php');
 }
 ?>

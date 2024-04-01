@@ -7,7 +7,7 @@
 $stellenangebot = $this->getVar('stellenangebot');
 			$benefits = $stellenangebot->getBenefits();
 
-			foreach ($benefits as $benefit) {
+			foreach ($benefits ?? [] as $benefit) {
 
 			    ?>
 

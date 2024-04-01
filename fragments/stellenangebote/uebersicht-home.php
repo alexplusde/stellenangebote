@@ -13,11 +13,11 @@ $limit = $this->getVar('limit');
 
 			$stellenangebote = FriendsOfRedaxo\Stellenangebote\Entry::findOnline();
 
-			foreach($stellenangebote as $stellenangebot) {
+			foreach($stellenangebote ?? [] as $stellenangebot) {
 
 			    $location_list = [];
 
-			    foreach($stellenangebot->getLocations() as $location) {
+			    foreach($stellenangebot->getLocations() ?? [] as $location) {
 			        $location_list[] =  $location->getLocality();
 			    };
 
