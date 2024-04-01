@@ -269,9 +269,9 @@ class Entry extends \rex_yform_manager_dataset {
     /**
      * Gibt die Bewerbungsfrist des Stellenangebots zurück.
      *
-     * @return \DateTime|null Die Bewerbungsfrist des Stellenangebots oder null, wenn keine Bewerbungsfrist gesetzt ist.
+     * @return string|null Die Bewerbungsfrist des Stellenangebots oder null, wenn keine Bewerbungsfrist gesetzt ist.
      */
-    public function getValidThrough() : ?\DateTime {
+    public function getValidThrough() : ?string {
         return $this->getValue("valid_through");
     }
 
