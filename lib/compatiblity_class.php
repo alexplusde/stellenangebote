@@ -11,7 +11,7 @@ class stellenangebote extends FriendsOfRedaxo\Stellenangebote\Entry
 /**
  * @deprecated Use FriendsOfRedaxo\Stellenangebote\Category instead.
  */
-class stellenangebote_entry extends FriendsOfRedaxo\Stellenangebote\Category
+class stellenangebote_category extends FriendsOfRedaxo\Stellenangebote\Category
 {
 
 }
