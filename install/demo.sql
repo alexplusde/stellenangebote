@@ -8,4 +8,4 @@ INSERT INTO `rex_stellenangebote_contact` (`status`, `name`, `mail`, `phone`, `d
 ('1',	'Personalabteilung',	'bewerbung@example.org',	'012345 / 6789 - 0',	'<p></p>');
 
 INSERT INTO `rex_stellenangebote_location` (`google_places`, `name`, `street`, `zip`, `locality`, `countrycode`, `lat_lng`, `lat`, `lng`) VALUES
-('',	'Unternehmensname',	'',	'',	'',	'DE',	'',	'');
+('',	'Unternehmensname',	'',	'',	'',	'DE',	'',	'', '');
