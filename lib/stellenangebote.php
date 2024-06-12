@@ -213,10 +213,10 @@ class Entry extends \rex_yform_manager_dataset {
     /**
      * Gibt die Vorteile des Stellenangebots zurück.
      *
-     * @return rex_yform_manager_dataset|null Die Vorteile des Stellenangebots oder null, wenn keine Vorteile gesetzt sind.
+     * @return rex_yform_manager_collection|null Die Vorteile des Stellenangebots oder null, wenn keine Vorteile gesetzt sind.
      */
-    public function getBenefits() : ?\rex_yform_manager_dataset {
-        return $this->getRelatedDataset("benefits");
+    public function getBenefits() : ?\rex_yform_manager_collection {
+        return $this->getRelatedCollection("benefits");
     }
 
     /**
