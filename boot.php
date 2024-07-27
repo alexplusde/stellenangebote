@@ -150,3 +150,25 @@ if (rex::isBackend()) {
         };
     });
 }
+
+
+if (rex::isBackend() && \rex_addon::get('stellenangebote') && \rex_addon::get('stellenangebote')->isAvailable() && !rex::isSafeMode()) {
+    $addon = rex_addon::get('stellenangebote');
+    $page = $addon->getProperty('page');
+
+    if(!rex::getConsole()) {
+        $_csrf_key = Entry::query()->getTable()->getCSRFKey();
+        
+        $token = \rex_csrf_token::factory($_csrf_key)->getUrlParams();
+
+        $params = [];
+        $params['table_name'] = 'rex_stellenangebote_entry'; // Tabellenname anpassen
+        $params['rex_yform_manager_popup'] = '0';
+        $params['_csrf_token'] = $token['_csrf_token'];
+        $params['func'] = 'add';
+
+        $href = \rex_url::backendPage('stellenangebote/stellenangebote/entry', $params);
+        $page['title'] .= ' <a class="label label-primary tex-primary" style="position: absolute; right: 18px; top: 10px; padding: 0.2em 0.6em 0.3em; border-radius: 3px; color: white; display: inline; width: auto;" href="' . $href . '">+</a>';
+        $addon->setProperty('page', $page);
+    }
+}
