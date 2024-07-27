@@ -154,10 +154,10 @@ if (rex::isBackend()) {
 
 if (rex::isBackend() && \rex_addon::get('stellenangebote') && \rex_addon::get('stellenangebote')->isAvailable() && !rex::isSafeMode()) {
     $addon = rex_addon::get('stellenangebote');
-    $pages = $addon->getProperty('pages');
+    $page = $addon->getProperty('page');
 
     if(!rex::getConsole()) {
-        $_csrf_key = \rex_yform_manager_table::get('rex_stellenangebote_entry')->getCSRFKey();
+        $_csrf_key = Entry::query()->getTable()->getCSRFKey();
         
         $token = \rex_csrf_token::factory($_csrf_key)->getUrlParams();
 
@@ -168,8 +168,7 @@ if (rex::isBackend() && \rex_addon::get('stellenangebote') && \rex_addon::get('s
         $params['func'] = 'add';
 
         $href = \rex_url::backendPage('stellenangebote/stellenangebote/entry', $params);
-
-        $pages['stellenangebote']['stellenangebote']['entry']['title'] .= ' <a class="label label-primary tex-primary" style="position: absolute; right: 18px; top: 10px; padding: 0.2em 0.6em 0.3em; border-radius: 3px; color: white; display: inline; width: auto;" href="' . $href . '">+</a>';
-        $addon->setProperty('pages', $pages);
+        $page['title'] .= ' <a class="label label-primary tex-primary" style="position: absolute; right: 18px; top: 10px; padding: 0.2em 0.6em 0.3em; border-radius: 3px; color: white; display: inline; width: auto;" href="' . $href . '">+</a>';
+        $addon->setProperty('page', $page);
     }
 }
