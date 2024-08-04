@@ -63,12 +63,12 @@ pages:
     settings:
         title: translate:stellenangebote_settings
         icon: rex-icon fa-gear
-        itemclass: pull-right
+        itemClass: pull-right
         perm: admin
     docs:
         title: translate:stellenangebote_docs
         icon: rex-icon fa-info-circle
-        itemclass: pull-right
+        itemClass: pull-right
         perm: stellenangebote[docs]
 
 default_config:
