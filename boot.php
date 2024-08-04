@@ -156,7 +156,7 @@ if (rex::isBackend() && \rex_addon::get('stellenangebote') && \rex_addon::get('s
     $addon = rex_addon::get('stellenangebote');
     $page = $addon->getProperty('page');
 
-    if(!rex::getConsole()) {
+    if (rex::isBackend() && !empty($_REQUEST)) {
         $_csrf_key = Entry::query()->getTable()->getCSRFKey();
         
         $token = \rex_csrf_token::factory($_csrf_key)->getUrlParams();
