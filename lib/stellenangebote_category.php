@@ -62,7 +62,7 @@ use rex_media;
      */
     public function setImage(string $filename) : self {
         if(rex_media::get($filename)) {
-            $this->getValue("image", $filename);
+            $this->setValue("image", $filename);
         }
         return $this;
     }

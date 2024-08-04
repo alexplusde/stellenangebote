@@ -111,7 +111,7 @@ class Entry extends \rex_yform_manager_dataset {
      */
     public function setImage(string $filename) : self {
         if(rex_media::get($filename)) {
-            $this->getValue("image", $filename);
+            $this->setValue("image", $filename);
         }
         return $this;
     }
@@ -137,7 +137,7 @@ class Entry extends \rex_yform_manager_dataset {
      */
     public function setVideo(string $filename) : self {
         if(rex_media::get($filename)) {
-            $this->getValue("video", $filename);
+            $this->setValue("video", $filename);
         }
         return $this;
     }

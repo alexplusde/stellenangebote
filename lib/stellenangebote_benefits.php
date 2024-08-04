@@ -75,7 +75,7 @@ class Benefits extends \rex_yform_manager_dataset {
      */
     public function setIconCustom(string $filename) : self {
         if(rex_media::get($filename)) {
-            $this->getValue("icon_custom", $filename);
+            $this->setValue("icon_custom", $filename);
         }
         return $this;
     }
