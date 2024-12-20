@@ -1,6 +1,6 @@
 <?php 
 
-namespace FriendsOfRedaxo\Stellenangebote;
+namespace Alexplusde\Stellenangebote;
 
 use rex_article;
 use rex_addon;
@@ -11,20 +11,20 @@ use rex_yrewrite;
 
 
 /**
- * Klasse stellenangebote
+ * Klasse Posting
  * 
  * Diese Klasse erweitert die rex_yform_manager_dataset Klasse und repräsentiert ein einzelnes Stellenangebot in der Datenbank.
  * Sie enthält Methoden zum Abrufen und Setzen des Titels eines Stellenangebots.
  * 
  * Beispiel:
- * $stellenangebot = stellenangebote::get(1);
+ * $stellenangebot = Alexplusde\Stellenangebote\Posting::get(1);
  * if ($stellenangebot) {
  *     echo $stellenangebot->getTitle();
  * }
  * 
  */
 
-class Entry extends \rex_yform_manager_dataset {
+class Posting extends \rex_yform_manager_dataset {
     
     /**
      * Gibt den Titel des Stellenangebots zurück.
@@ -537,7 +537,7 @@ class Entry extends \rex_yform_manager_dataset {
      * @param int $id Die Artikel-ID.
      * @return stellenangebote|null Das Stellenangebot oder null, wenn kein Stellenangebot für die gegebene Artikel-ID gefunden wurde.
      */
-    public static function getByArticleId($id): ?Entry
+    public static function getByArticleId($id): ?Posting
     {
         return self::query()->where('article_id', $id)->findOne();
     }
@@ -613,7 +613,7 @@ class Entry extends \rex_yform_manager_dataset {
      */
     public static function findOnline($limit = 6): ?\rex_yform_manager_collection
     {
-        return Entry::query()->where("status", 1, '>=')->limit($limit)->find();
+        return Posting::query()->where("status", 1, '>=')->limit($limit)->find();
     }    
     
     /**

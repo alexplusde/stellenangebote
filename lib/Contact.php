@@ -1,6 +1,6 @@
 <?php 
 
-namespace FriendsOfRedaxo\Stellenangebote;
+namespace Alexplusde\Stellenangebote;
 
 use rex_media;
 

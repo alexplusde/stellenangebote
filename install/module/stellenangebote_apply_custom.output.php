@@ -7,7 +7,13 @@ $output->setVar("slice_id", "REX_SLICE_ID");
 $output->setVar("article_id", "REX_ARTICLE_ID");
 $output->setVar("modul_name", "REX_MODULE_KEY");
 
-$output->setVar("limit", false);
+/* REX_VALUE */
+$output->setVar("title", "REX_VALUE[1 output=html]");
+$output->setVar("level", "REX_VALUE[2 output=html]");
+$output->setVar("text", "REX_VALUE[4 output=html]", false);
+$output->setVar("cta", "REX_VALUE[8 output=html]", false);
+
+$output->setVar("limit", 6);
 
 echo $output->parse("REX_MODULE_KEY");
 

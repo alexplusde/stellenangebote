@@ -1,6 +1,6 @@
 <?php 
 
-namespace FriendsOfRedaxo\Stellenangebote;
+namespace Alexplusde\Stellenangebote;
 
 class Apply extends \rex_yform_manager_dataset {
 	
