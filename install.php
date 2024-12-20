@@ -1,7 +1,9 @@
 <?php
 
+use Alexplusde\BS5\Helper;
+
 if (rex_addon::get('plus_bs5')->isAvailable() && !rex::isSafeMode()) {
-bs5::forceBackup();
+Helper::forceBackup();
 }
 
 if (rex_addon::get('yform')->isAvailable() && !rex::isSafeMode()) {
@@ -14,7 +16,7 @@ if (rex_config::get('stellenangebote', 'company_name') === "") {
     rex_config::set('stellenangebote', 'company_url', rex_article::getSiteStartArticleId());
 }
 
-if (rex_addon::get('plus_bs5')->isAvailable() && !rex::isSafeMode()) {
-    bs5::updateModule("stellenangebote");
-    bs5::updateTemplate("stellenangebote");
-}
+Helper::updateModule('stellenangebote');
+Helper::updateTemplate('stellenangebote');
+
+\rex_delete_cache();
