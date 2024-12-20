@@ -1,12 +1,12 @@
 package: stellenangebote
-version: '3.0.0-beta2'
+version: '4.0.0-dev-2024-12-18'
 author: 'Alexander Walther, Paul Götz'
 supportpage: https://github.com/alexplusde/stellenangebote
 
 requires:
     php:
-        version: '>7.3,<9'
-    redaxo: ^5.13
+        version: '>8.2,<9'
+    redaxo: ^5.18
     packages:
         accessdenied: ">=1"
         auto_delete: ">=0"
@@ -74,7 +74,7 @@ pages:
 default_config:
     company_name: ''
     company_url: ''
-    editor: 'class="form-control cke5-editor" data-lang="de" data-profile="default"'
+    editor: 'class="form-control redactor-editor--default"'
     apply_value_id: 
     category_id: 
     thank_you_id: 
