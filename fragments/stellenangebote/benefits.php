@@ -5,7 +5,7 @@
 
 			<?php
 
-            $benefits = FriendsOfRedaxo\Stellenangebote\Benefits::query()->find();
+            $benefits = Alexplusde\Stellenangebote\Benefits::query()->find();
 
 			foreach ($benefits ?? [] as $benefit) {
 

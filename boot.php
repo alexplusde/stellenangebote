@@ -1,7 +1,8 @@
 <?php
 
-namespace FriendsOfRedaxo\Stellenangebote;
+namespace Alexplusde\Stellenangebote;
 
+use Alexplusde\BS5\Helper;
 use rex_addon;
 use rex_config;
 use rex_yform_manager_dataset;
@@ -17,7 +18,7 @@ use rex_article;
 if (rex_addon::get('yform')->isAvailable() && !rex::isSafeMode()) {
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote',
-        Entry::class
+        Posting::class
     );
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote_contact',
@@ -51,18 +52,19 @@ if (rex::isBackend()) {
         if(rex_config::get('stellenangebote', 'category_id')) {
             $category = rex_category::get(rex_request('category_id', 'int'));
             if($category && $category->getClosest(fn (rex_category $cat) => rex_config::get('stellenangebote', 'category_id') == $cat->getId())) {
-                Entry::addContentPage();
+                Posting::addContentPage();
             }
         } else {
-            Entry::addContentPage();
+            Posting::addContentPage();
         }
     }
 }
 
 if (rex::isBackend() && rex::isDebugMode() && rex_config::get('plus_bs5', 'dev')) {
-    \bs5::writeModule("stellenangebote", 'stellenangebote/%');
-    \bs5::writeTemplate("stellenangebote", 'stellenangebote/%');
+    Helper::writeModule('stellenangebote', 'stellenangebote.%');
+    Helper::writeTemplate('stellenangebote', 'stellenangebote.%');
 }
+
 //schönere Tabellendarstellung
 
 if (rex::isBackend()) {
@@ -157,7 +159,7 @@ if (rex::isBackend() && \rex_addon::get('stellenangebote') && \rex_addon::get('s
     $page = $addon->getProperty('page');
 
     if (rex::isBackend() && !empty($_REQUEST)) {
-        $_csrf_key = Entry::query()->getTable()->getCSRFKey();
+        $_csrf_key = Posting::query()->getTable()->getCSRFKey();
         
         $token = \rex_csrf_token::factory($_csrf_key)->getUrlParams();
 

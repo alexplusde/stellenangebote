@@ -11,7 +11,7 @@
 
 $limit = $this->getVar('limit');
 
-			$stellenangebote = FriendsOfRedaxo\Stellenangebote\Entry::findOnline();
+			$stellenangebote = Alexplusde\Stellenangebote\Posting::findOnline();
 
 			foreach($stellenangebote ?? [] as $stellenangebot) {
 
