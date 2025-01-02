@@ -16,7 +16,10 @@ if (rex_config::get('stellenangebote', 'company_name') === "") {
     rex_config::set('stellenangebote', 'company_url', rex_article::getSiteStartArticleId());
 }
 
-Helper::updateModule('stellenangebote');
-Helper::updateTemplate('stellenangebote');
+if (rex::isBackend() && rex::isDebugMode() && rex_config::get('plus_bs5', 'dev')) {
+    Helper::updateModule('stellenangebote');
+    Helper::updateTemplate('stellenangebote');
+}
+
 
 \rex_delete_cache();
