@@ -1,4 +1,4 @@
-# `stellenangebote_benefits`-Objekt
+# `Alexplusde\Stellenangebote\Benefits`-Objekt
 
 Diese Klasse repräsentiert die Mitarbeiter*innen-Vorteile eines Stellenangebots in der Datenbank. Sie erbt von der Klasse `rex_yform_manager_dataset` und stellt Methoden zur Verfügung, um auf die Daten der Vorteile zuzugreifen und diese zu manipulieren. Beispiele für Vorteile sind "E-Bike-Leasing", "Zusätzliche Urlaubstage", usw.
 
@@ -6,7 +6,7 @@ Diese Klasse repräsentiert die Mitarbeiter*innen-Vorteile eines Stellenangebots
 
 ```php
 // Ein Vorteil anhand seiner ID abrufen
-$benefit = stellenangebote_benefits::get($id);
+$benefit = Alexplusde\Stellenangebote\Benefits::get($id);
 
 if ($benefit) {
     // Getter-Methoden verwenden
@@ -23,7 +23,7 @@ if ($benefit) {
 
 ```php
 // Ein neues Vorteilsobjekt erstellen
-$benefit = stellenangebote_benefits::create();
+$benefit = Alexplusde\Stellenangebote\Benefits::create();
 
 // Setter-Methoden verwenden
 $benefit->setIcon('neues-icon');

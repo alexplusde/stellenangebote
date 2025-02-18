@@ -1,12 +1,12 @@
 # `Location`-Objekt
 
-Die Klasse `stellenangebote_location` repräsentiert einen Standort, an dem eine Tätigkeit ausgeführt wird, oder eine Filiale/Niederlassung in Bezug auf ein Stellenangebot in der Datenbank. Sie erbt von der Klasse `rex_yform_manager_dataset` und stellt Methoden zur Verfügung, um auf die Daten des Standorts zuzugreifen und diese zu manipulieren.
+Die Klasse `Alexplusde\Stellenangebote\Location` repräsentiert einen Standort, an dem eine Tätigkeit ausgeführt wird, oder eine Filiale/Niederlassung in Bezug auf ein Stellenangebot in der Datenbank. Sie erbt von der Klasse `rex_yform_manager_dataset` und stellt Methoden zur Verfügung, um auf die Daten des Standorts zuzugreifen und diese zu manipulieren.
 
 ## Beispiele
 
 ```php
 // Holen Sie sich ein Standortobjekt anhand der ID
-$location = stellenangebote_location::get($id);
+$location = Alexplusde\Stellenangebote\Location::get($id);
 if ($location) {
     echo $location->getGooglePlaces();
     echo $location->getName();
@@ -25,7 +25,7 @@ if ($location) {
 ```
 
 ```php
-$location = stellenangebote_location::create();
+$location = Alexplusde\Stellenangebote\Location::create();
 
 $location->setGooglePlaces('Embed-Code');
 $location->setName('Firmenname');

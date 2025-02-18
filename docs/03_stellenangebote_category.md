@@ -1,10 +1,10 @@
 # `Category`-Objekt
 
-Die Klasse stellenangebote_category repräsentiert die Kategorie eines Stellenangebots in der Datenbank. Sie erbt von der Klasse rex_yform_manager_dataset und stellt Methoden zur Verfügung, um auf die Daten der Kategorie zuzugreifen und diese zu manipulieren. Beispiele für Kategorien sind "Allgemein", "Marketing", "Vertrieb", "IT" usw.
+Die Klasse Alexplusde\Stellenangebote\Category repräsentiert die Kategorie eines Stellenangebots in der Datenbank. Sie erbt von der Klasse rex_yform_manager_dataset und stellt Methoden zur Verfügung, um auf die Daten der Kategorie zuzugreifen und diese zu manipulieren. Beispiele für Kategorien sind "Allgemein", "Marketing", "Vertrieb", "IT" usw.
 
 ```php
 // Holen Sie sich ein Kategorieobjekt anhand der ID
-$category = stellenangebote_category::get($id);
+$category = Alexplusde\Stellenangebote\Category::get($id);
 
 if($category) {
     // Zugriff auf die Werte mit den Getter-Methoden
@@ -23,7 +23,7 @@ if($category) {
 
 ```php
 // Erstellen Sie ein neues Kategorieobjekt
-$category = stellenangebote_category::create();
+$category = Alexplusde\Stellenangebote\Category::create();
 
 // Setzen Sie die Werte mit den Setter-Methoden
 $category->setIcon('icon-css-class');
