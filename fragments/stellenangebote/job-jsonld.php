@@ -1,34 +1,64 @@
 <?php
 
-$stellenangebot = Alexplusde\Stellenangebote\Posting::get($this->getVar("id"));
+use Alexplusde\Stellenangebote\Posting;
+use rex_config;
 
-$stelle = [];
-$stelle["@context"] = "https://schema.org/";
-$stelle["@type"] = "JobPosting";
-$stelle["title"] = $stellenangebot->getTitle();
-$stelle["description"] = $stellenangebot->getDescription();
-$stelle["datePosted"] = $stellenangebot->getDatePosted();
-$stelle["validThrough"] = $stellenangebot->getValidThrough();
-$stelle["directApply"] = $stellenangebot->getdirectApply();
-$stelle["employmentType"] = $stellenangebot->getEmploymentType();
-$stelle["jobLocationType"] = ($stellenangebot->jobLocationType() == true) ? "TELECOMMUTE" : "";
+$stellenangebot = Posting::get($this->getVar("id"));
 
-# $baseSalary = [];
+$output = [];
+$output["@context"] = "https://schema.org/";
+$output["@type"] = "JobPosting";
+$output["title"] = $stellenangebot->getTitle();
+$output["description"] = $stellenangebot->getDescription();
+$output["datePosted"] = date("Y-m-d", strtotime($stellenangebot->getDatePosted()));
+
+$output["directApply"] = $stellenangebot->getdirectApply();
+$output["employmentType"] = $stellenangebot->getEmploymentType();
+
+if ($stellenangebot->getValidThrough()) {
+    $output["validThrough"] = date("Y-m-d", strtotime($stellenangebot->getValidThrough()));
+}
+
+$output["employmentType"] = $stellenangebot->getEmploymentType();
 
 $hiringOrganization = [];
 $hiringOrganization["@type"] = "Organization";
 $hiringOrganization["name"] = rex_config::get("stellenangebote", "company_name");
 $hiringOrganization["sameAs"] = rex_config::get("stellenangebote", "company_url");
-# $hiringOrganization["logo"] = "";
 
-$stelle["hiringOrganization"] = $hiringOrganization;
+if (rex_config::get("stellenangebote", "company_logo")) {
+    $hiringOrganization["logo"] = rex_config::get("stellenangebote", "company_logo");
+}
 
-$jobLocation = [];
-$jobLocation["@type"] = "Place";
-$jobLocation["address"]["@type"] = "PostalAddress";
-# $jobLocation["address"]["addressLocality"] = $this->getLocationAddressLocality();
-# $jobLocation["address"]["addressCountry"] = $this->getLocationAddressCountry();
+$output["hiringOrganization"] = $hiringOrganization;
 
-$stelle["jobLocation"] = $jobLocation;
+$locations = $stellenangebot->getLocations();
+$jobLocations = [];
 
-echo json_encode($stelle);
+foreach ($locations as $location) {
+    /** @var stellenangebote_location $location */
+    $jobLocation = [];
+    $jobLocation["@type"] = "Place";
+    $jobLocation["address"]["@type"] = "PostalAddress";
+    // $jobLocation["address"]["addressLocality"] = $location->getAddressLocality();
+    // $jobLocation["address"]["addressCountry"] = $location->getAddressCountry();
+
+    $jobLocations[] = $jobLocation;
+}
+
+/*
+$stelle["jobLocation"] = $jobLocations;
+*/
+
+/*
+if ($stellenangebot->getBaseSalary()) {
+    $baseSalary = [];
+    $baseSalary["@type"] = "MonetaryAmount";
+    $baseSalary["currency"] = "EUR";
+    $baseSalary["value"] = $stellenangebot->getBaseSalary();
+
+    $stelle["baseSalary"] = $baseSalary;
+}
+*/
+
+echo json_encode($output);
