@@ -20,9 +20,7 @@ stellenangebote_category_id = Beschränke auf Kategorie
 # Konfigurationsformulare
 stellenangebote_config = Einstellungen
 stellenangebote_config_company_text_label = Unternehmens-Text
-stellenangebote_config_company_text_notice = Über das Unternehmen als Arbeitgeber
 stellenangebote_config_company_email_signature_label = E-Mail-Signatur
-stellenangebote_config_company_email_signature_notice = Signatur für Bewerbungs-E-Mails
 stellenangebote_config_company_name_label = Unternehmens-Name
 stellenangebote_config_company_name_notice = Name des suchenden Unternehmens
 

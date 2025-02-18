@@ -5,9 +5,9 @@
 
 			<?php
 
-            $benefits = stellenangebote_benefits::query()->find();
+            $benefits = Alexplusde\Stellenangebote\Benefits::query()->find();
 
-			foreach ($benefits as $benefit) {
+			foreach ($benefits ?? [] as $benefit) {
 
 			    ?>
 

@@ -11,13 +11,13 @@
 
 $limit = $this->getVar('limit');
 
-			$stellenangebote = stellenangebote::findOnline(100);
+			$stellenangebote = Alexplusde\Stellenangebote\Posting::findOnline(100);
 
-			foreach($stellenangebote as $stellenangebot) {
+			foreach($stellenangebote ?? [] as $stellenangebot) {
 
 			    $location_list = [];
 
-			    foreach($stellenangebot->getLocations() as $location) {
+			    foreach($stellenangebot->getLocations() ?? [] as $location) {
 			        $location_list[] =  $location->getLocality();
 			    };
 

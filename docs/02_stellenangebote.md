@@ -6,7 +6,7 @@ Diese Klasse erweitert die rex_yform_manager_dataset Klasse und repräsentiert e
 
 ```php
 // Holen Sie sich ein Standortobjekt anhand der ID
-$stellenangebot = stellenangebote::get($id);
+$stellenangebot = Alexplusde\Stellenangebote\Posting::get($id);
 if ($stellenangebot) {
 
     $benefits = $stellenangebot->getBenefits();

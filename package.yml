@@ -1,19 +1,18 @@
 package: stellenangebote
-version: '3.0.0-beta1'
+version: '4.0.0-dev-2025-02-18'
 author: 'Alexander Walther, Paul Götz'
 supportpage: https://github.com/alexplusde/stellenangebote
 
 requires:
     php:
-        version: '>7.3,<9'
-    redaxo: ^5.13
+        version: '>8.2,<9'
+    redaxo: ^5.18
     packages:
         accessdenied: ">=1"
         auto_delete: ">=0"
         yform: "^4"
         yform_spam_protection: "^1"
         yform_field: "^2"
-        yform_geo_osm: "^1"
 
 page:
     title: translate:stellenangebote_title
@@ -63,18 +62,18 @@ pages:
     settings:
         title: translate:stellenangebote_settings
         icon: rex-icon fa-gear
-        itemclass: pull-right
+        itemClass: pull-right
         perm: admin
     docs:
         title: translate:stellenangebote_docs
         icon: rex-icon fa-info-circle
-        itemclass: pull-right
+        itemClass: pull-right
         perm: stellenangebote[docs]
 
 default_config:
     company_name: ''
     company_url: ''
-    editor: 'class="form-control cke5-editor" data-lang="de" data-profile="default"'
+    editor: 'class="form-control redactor-editor--default"'
     apply_value_id: 
     category_id: 
     thank_you_id: 

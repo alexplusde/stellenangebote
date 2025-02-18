@@ -1,5 +1,9 @@
 <?php 
 
+namespace Alexplusde\Stellenangebote;
+
+use rex_media;
+
 /**
  * Diese Klasse repräsentiert die Ansprechperson zu einem Stellenangebot bei einer Bewerbung.
  * Sie erbt von der Klasse rex_yform_manager_dataset und stellt Methoden zur Verfügung,
@@ -12,7 +16,7 @@
  * }
  */
 
- class stellenangebote_contact extends \rex_yform_manager_dataset {
+ class Contact extends \rex_yform_manager_dataset {
 	
     /**
      * Gibt an, ob die Ansprechperson auswählbar ist / gezeigt werden soll.
@@ -174,7 +178,7 @@
      */
     public function setPhoto(string $filename) : self {
         if(rex_media::get($filename)) {
-            $this->getValue("photo", $filename);
+            $this->setValue("photo", $filename);
         }
         return $this;
     }

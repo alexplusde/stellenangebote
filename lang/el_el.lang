@@ -1,0 +1,43 @@
+stellenangebote_title = Θέσεις εργασίας
+
+# Backend-Pages
+stellenangebote_docs = Βοήθεια
+stellenangebote_settings = Ρυθμίσεις
+stellenangebote_benefits = Πλεονεκτήματα
+stellenangebote_category = Κατηγορίες
+stellenangebote_contact = Επαφές
+stellenangebote_location = Τοποθεσίες
+stellenangebote_entry = Θέσεις εργασίας
+
+stellenangebote_apply = Αιτήσεις
+stellenangebote_apply_message = Υποψήφιοι
+stellenangebote_apply_custom = Έρευνα
+
+# Structure Content Page
+stellenangebote_content_page_title = Θέση εργασίας
+stellenangebote_category_id = Περιορίστε στην κατηγορία
+
+# Konfigurationsformulare
+stellenangebote_config = Ρυθμίσεις
+stellenangebote_config_company_text_label = Κείμενο εταιρείας
+stellenangebote_config_company_email_signature_label = Υπογραφή email
+stellenangebote_config_company_name_label = Όνομα εταιρείας
+stellenangebote_config_company_name_notice = Όνομα της εταιρείας που αναζητά
+
+stellenangebote_apply_value_id = Σελίδα αίτησης
+
+stellenangebote_config_url_kununu = URL Kununu
+stellenangebote_config_url_xing = URL Xing
+stellenangebote_config_url_linkedin = URL LinkedIn
+
+stellenangebote_config_company_url_label = Ιστοσελίδα εταιρείας
+stellenangebote_config_company_url_notice = Διεύθυνση της εταιρείας (επιλέξτε το αρχικό άρθρο στο REDAXO)
+
+stellenangebote_editor = Επεξεργαστής
+
+stellenangebote_demo = Εισαγωγή δεδομένων demo
+stellenangebote_demo_notice = Δημιουργεί 2 πρότυπα email YForm και προσθέτει μερικές φανταστικές θέσεις εργασίας, συμπεριλαμβανομένων επαφών και τοποθεσίας.
+
+# Beauftragungshinweis
+
+stellenangebote_info_donate = Σε αντίθεση με τα περισσότερα πρόσθετα από την κοινότητα REDAXO, η δημιουργία και η περαιτέρω ανάπτυξη αυτού του πρόσθετου δεν καλύπτεται από τα δικά μας

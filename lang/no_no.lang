@@ -1,0 +1,56 @@
+stellenangebote_title = Stillingsannonser
+
+# Backend-Pages
+stellenangebote_docs = Hjelp
+stellenangebote_settings = Innstillinger
+stellenangebote_benefits = Fordeler
+stellenangebote_category = Kategorier
+stellenangebote_contact = Kontaktpersoner
+stellenangebote_location = Steder
+stellenangebote_entry = Stillingsannonser
+
+stellenangebote_apply = Søknader
+stellenangebote_apply_message = Søkere
+stellenangebote_apply_custom = Undersøkelse
+
+# Structure Content Page
+stellenangebote_content_page_title = Stillingsannonse
+stellenangebote_category_id = Begrens til kategori
+
+# Konfigurationsformulare
+stellenangebote_config = Innstillinger
+stellenangebote_config_company_text_label = Bedriftstekst
+stellenangebote_config_company_email_signature_label = E-post signatur
+stellenangebote_config_company_name_label = Bedriftsnavn
+stellenangebote_config_company_name_notice = Navn på søkende selskap
+
+stellenangebote_apply_value_id = Søknadsside
+
+stellenangebote_config_url_kununu = Kununu-URL
+stellenangebote_config_url_xing = Xing-URL
+stellenangebote_config_url_linkedin = LinkedIn-URL
+
+stellenangebote_config_company_url_label = Bedriftsnettsted
+stellenangebote_config_company_url_notice = Bedriftens adresse (velg startartikkel i REDAXO)
+
+stellenangebote_editor = Editor
+
+stellenangebote_demo = Importer demo data
+stellenangebote_demo_notice = Oppretter 2 YForm e-postmaler og legger til noen fiktive jobbannonser inkludert kontaktperson og sted.
+
+# Beauftragungshinweis
+
+stellenangebote_info_donate = I motsetning til de fleste tillegg fra REDAXO-samfunnet, er opprettelsen og videreutviklingen av dette tillegget ikke dekket av egne prosjekter. Med en oppdrag kan du finansiere utviklingen retroaktivt og sikre videreutvikling av flere funksjoner samt en forbedret veiledning.
+stellenangebote_donate = Støtte videreutvikling 
+
+# Docs
+
+stellenangebote_docs_intro = Introduksjon
+stellenangebote_docs_stellenangebote = Stillingsannonse
+stellenangebote_docs_stellenangebote_category = Kategori
+stellenangebote_docs_stellenangebote_benefits = Fordeler
+stellenangebote_docs_stellenangebote_location = Steder
+stellenangebote_docs_stellenangebote_contact = Kontaktpersoner
+stellenangebote_docs_stellenangebote_apply = Søknader
+stellenangebote_docs_settings = Innstillinger
+stellenangebote_docs_fragments = Fragmenter

@@ -1,5 +1,12 @@
 <?php 
 
+namespace Alexplusde\Stellenangebote;
+
+use rex_addon;
+use rex_media;
+use rex_media_plus;
+
+
 /**
  * Diese Klasse repräsentiert die Mitarbeiter*innen-Vorteile eines Stellenangebots in der Datenbank.
  * Sie erbt von der Klasse rex_yform_manager_dataset und stellt Methoden zur Verfügung,
@@ -12,7 +19,7 @@
  *     echo $benefit->getValue('name');
  * }
  */
-class stellenangebote_benefits extends \rex_yform_manager_dataset {
+class Benefits extends \rex_yform_manager_dataset {
 
     /**
      * Findet Datensätze basierend auf einem gegebenen Set.
@@ -22,7 +29,7 @@ class stellenangebote_benefits extends \rex_yform_manager_dataset {
      *
      * @deprecated Diese Methode ist veraltet und sollte nicht mehr verwendet werden. Stattdessen direkt die Methode getBenefits() eines Stellenangebots verwenden.
      */
-    public static function findBySet($set = ''): ?rex_yform_manager_collection
+    public static function findBySet($set = ''): ?\rex_yform_manager_collection
     {
         return self::query()->whereRaw('FIND_IN_SET(id, "' . $set . '")')->find();
     }
@@ -68,7 +75,7 @@ class stellenangebote_benefits extends \rex_yform_manager_dataset {
      */
     public function setIconCustom(string $filename) : self {
         if(rex_media::get($filename)) {
-            $this->getValue("icon_custom", $filename);
+            $this->setValue("icon_custom", $filename);
         }
         return $this;
     }

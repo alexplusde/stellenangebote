@@ -1,0 +1,56 @@
+stellenangebote_title = Ofertas de empleo
+
+# Backend-Pages
+stellenangebote_docs = Ayuda
+stellenangebote_settings = Configuraciones
+stellenangebote_benefits = Beneficios
+stellenangebote_category = Categorías
+stellenangebote_contact = Personas de contacto
+stellenangebote_location = Ubicaciones
+stellenangebote_entry = Ofertas de empleo
+
+stellenangebote_apply = Solicitudes
+stellenangebote_apply_message = Solicitantes
+stellenangebote_apply_custom = Encuesta
+
+# Structure Content Page
+stellenangebote_content_page_title = Oferta de empleo
+stellenangebote_category_id = Limitar a categoría
+
+# Konfigurationsformulare
+stellenangebote_config = Configuraciones
+stellenangebote_config_company_text_label = Texto de la empresa
+stellenangebote_config_company_email_signature_label = Firma de correo electrónico
+stellenangebote_config_company_name_label = Nombre de la empresa
+stellenangebote_config_company_name_notice = Nombre de la empresa buscadora
+
+stellenangebote_apply_value_id = Página de solicitud
+
+stellenangebote_config_url_kununu = URL de Kununu
+stellenangebote_config_url_xing = URL de Xing
+stellenangebote_config_url_linkedin = URL de LinkedIn
+
+stellenangebote_config_company_url_label = Sitio web de la empresa
+stellenangebote_config_company_url_notice = Dirección de la empresa (seleccionar artículo de inicio en REDAXO)
+
+stellenangebote_editor = Editor
+
+stellenangebote_demo = Importar datos de demostración
+stellenangebote_demo_notice = Crea 2 plantillas de correo electrónico YForm y agrega algunas ofertas de empleo ficticias, incluyendo persona de contacto y ubicación.
+
+# Beauftragungshinweis
+
+stellenangebote_info_donate = A diferencia de la mayoría de los complementos de la comunidad REDAXO, la creación y desarrollo de este complemento no está cubierta por proyectos propios. Con un encargo, puedes financiar el desarrollo de forma retroactiva y asegurar el desarrollo adicional de características y una guía mejorada. 
+stellenangebote_donate = Apoyar el desarrollo adicional 
+
+# Docs
+
+stellenangebote_docs_intro = Introducción
+stellenangebote_docs_stellenangebote = Oferta de empleo
+stellenangebote_docs_stellenangebote_category = Categoría
+stellenangebote_docs_stellenangebote_benefits = Beneficios
+stellenangebote_docs_stellenangebote_location = Ubicaciones
+stellenangebote_docs_stellenangebote_contact = Personas de contacto
+stellenangebote_docs_stellenangebote_apply = Solicitudes
+stellenangebote_docs_settings = Configuraciones
+stellenangebote_docs_fragments = Fragmentos

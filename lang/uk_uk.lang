@@ -1,0 +1,56 @@
+stellenangebote_title = Вакансії
+
+# Backend-Pages
+stellenangebote_docs = Допомога
+stellenangebote_settings = Налаштування
+stellenangebote_benefits = Переваги
+stellenangebote_category = Категорії
+stellenangebote_contact = Контактні особи
+stellenangebote_location = Місцезнаходження
+stellenangebote_entry = Вакансії
+
+stellenangebote_apply = Заявки
+stellenangebote_apply_message = Кандидати
+stellenangebote_apply_custom = Опитування
+
+# Structure Content Page
+stellenangebote_content_page_title = Вакансія
+stellenangebote_category_id = Обмежити категорію
+
+# Konfigurationsformulare
+stellenangebote_config = Налаштування
+stellenangebote_config_company_text_label = Текст компанії
+stellenangebote_config_company_email_signature_label = Підпис електронної пошти
+stellenangebote_config_company_name_label = Назва компанії
+stellenangebote_config_company_name_notice = Назва шукача компанії
+
+stellenangebote_apply_value_id = Сторінка заявок
+
+stellenangebote_config_url_kununu = Kununu-URL
+stellenangebote_config_url_xing = Xing-URL
+stellenangebote_config_url_linkedin = LinkedIn-URL
+
+stellenangebote_config_company_url_label = Веб-сайт компанії
+stellenangebote_config_company_url_notice = Адреса компанії (виберіть стартову статтю в REDAXO)
+
+stellenangebote_editor = Редактор
+
+stellenangebote_demo = Імпортувати демо-дані
+stellenangebote_demo_notice = Створює 2 шаблони електронної пошти YForm та додає декілька вигаданих вакансій, включаючи контактну особу та місцезнаходження.
+
+# Beauftragungshinweis
+
+stellenangebote_info_donate = На відміну від більшості додатків з REDAXO-спільноти, створення та розвиток цього додатка не покриваються власними проектами. Замовленням ви може фінансувати розвиток зворотньо та забезпечити розвиток додаткових функцій, а також покращену інструкцію.
+stellenangebote_donate = Підтримати розвиток 
+
+# Docs
+
+stellenangebote_docs_intro = Вступ
+stellenangebote_docs_stellenangebote = Вакансія
+stellenangebote_docs_stellenangebote_category = Категорія
+stellenangebote_docs_stellenangebote_benefits = Переваги
+stellenangebote_docs_stellenangebote_location = Місцезнаходження
+stellenangebote_docs_stellenangebote_contact = Контактні особи
+stellenangebote_docs_stellenangebote_apply = Заявки
+stellenangebote_docs_settings = Налаштування
+stellenangebote_docs_fragments = Фрагменти

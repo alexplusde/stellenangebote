@@ -1,29 +1,44 @@
 <?php
 
+namespace Alexplusde\Stellenangebote;
+
+use Alexplusde\BS5\Helper;
+use rex_addon;
+use rex_config;
+use rex_yform_manager_dataset;
+use rex;
+use rex_extension;
+use rex_extension_point;
+use rex_be_controller;
+use rex_category;
+use rex_article;
+
+
+
 if (rex_addon::get('yform')->isAvailable() && !rex::isSafeMode()) {
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote',
-        stellenangebote::class
+        Posting::class
     );
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote_contact',
-        stellenangebote_contact::class
+        Contact::class
     );
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote_location',
-        stellenangebote_location::class
+        Location::class
     );
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote_apply',
-        stellenangebote_apply::class
+        Apply::class
     );
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote_benefits',
-        stellenangebote_benefits::class
+        Benefits::class
     );
     rex_yform_manager_dataset::setModelClass(
         'rex_stellenangebote_category',
-        stellenangebote_category::class
+        Category::class
     );
 }
 
@@ -37,18 +52,19 @@ if (rex::isBackend()) {
         if(rex_config::get('stellenangebote', 'category_id')) {
             $category = rex_category::get(rex_request('category_id', 'int'));
             if($category && $category->getClosest(fn (rex_category $cat) => rex_config::get('stellenangebote', 'category_id') == $cat->getId())) {
-                stellenangebote::addContentPage();
+                Posting::addContentPage();
             }
         } else {
-            stellenangebote::addContentPage();
+            Posting::addContentPage();
         }
     }
 }
 
 if (rex::isBackend() && rex::isDebugMode() && rex_config::get('plus_bs5', 'dev')) {
-    bs5::writeModule("stellenangebote", 'stellenangebote/%');
-    bs5::writeTemplate("stellenangebote", 'stellenangebote/%');
+    Helper::writeModule('stellenangebote', 'stellenangebote.%');
+    Helper::writeTemplate('stellenangebote', 'stellenangebote.%');
 }
+
 //schönere Tabellendarstellung
 
 if (rex::isBackend()) {
@@ -72,8 +88,8 @@ if (rex::isBackend()) {
                     if($a['list']->getValue('article_id') && rex_article::get($a['list']->getValue('article_id'))) {
                         $output[] = '🔗 <a href="'.rex_article::get($a['list']->getValue('article_id'))->getUrl().'>Zum Artikel</a>';
                     }
-                    if($a['list']->getValue('category_id') && stellenangebote_category::get($a['list']->getValue('category_id'))) {
-                        $output[] = "📁 " . stellenangebote_category::get($a['list']->getValue('category_id'))->getValue('name');
+                    if($a['list']->getValue('category_id') && Category::get($a['list']->getValue('category_id'))) {
+                        $output[] = "📁 " . Category::get($a['list']->getValue('category_id'))->getValue('name');
                     }
 
                     $employment_types = $array = [
@@ -111,7 +127,7 @@ if (rex::isBackend()) {
 
                     $benefits_badges = [];
                     foreach($benefits_ids as $benefits_id) {
-                        $benefit = stellenangebote_benefits::get($benefits_id);
+                        $benefit = Benefits::get($benefits_id);
                         if($benefit) {
                             $benefits_badges[] = '<span class="label label-success">'. $benefit->getName() .'</span>';
                         }
@@ -135,4 +151,26 @@ if (rex::isBackend()) {
             $list->setColumnLabel('telecommute', '🏠');
         };
     });
+}
+
+
+if (rex::isBackend() && \rex_addon::get('stellenangebote') && \rex_addon::get('stellenangebote')->isAvailable() && !rex::isSafeMode()) {
+    $addon = rex_addon::get('stellenangebote');
+    $page = $addon->getProperty('page');
+
+    if (rex::isBackend() && !empty($_REQUEST)) {
+        $_csrf_key = Posting::query()->getTable()->getCSRFKey();
+        
+        $token = \rex_csrf_token::factory($_csrf_key)->getUrlParams();
+
+        $params = [];
+        $params['table_name'] = 'rex_stellenangebote_entry'; // Tabellenname anpassen
+        $params['rex_yform_manager_popup'] = '0';
+        $params['_csrf_token'] = $token['_csrf_token'];
+        $params['func'] = 'add';
+
+        $href = \rex_url::backendPage('stellenangebote/stellenangebote/entry', $params);
+        $page['title'] .= ' <a class="label label-primary tex-primary" style="position: absolute; right: 18px; top: 10px; padding: 0.2em 0.6em 0.3em; border-radius: 3px; color: white; display: inline; width: auto;" href="' . $href . '">+</a>';
+        $addon->setProperty('page', $page);
+    }
 }

@@ -1,5 +1,5 @@
 <?php
-stellenangebote::get($this->getVar("id"));
+Alexplusde\Stellenangebote\Posting::get($this->getVar("id"));
 ?>
 <div class="stelleangebot">
 	<h1><?= $stellenangebot->getTitle() ?></h1>

@@ -1,19 +1,30 @@
 <?php 
+
+namespace Alexplusde\Stellenangebote;
+
+use rex_article;
+use rex_addon;
+use rex_config;
+use rex_fragment;
+use rex_media;
+use rex_yrewrite;
+
+
 /**
- * Klasse stellenangebote
+ * Klasse Posting
  * 
  * Diese Klasse erweitert die rex_yform_manager_dataset Klasse und repräsentiert ein einzelnes Stellenangebot in der Datenbank.
  * Sie enthält Methoden zum Abrufen und Setzen des Titels eines Stellenangebots.
  * 
  * Beispiel:
- * $stellenangebot = stellenangebote::get(1);
+ * $stellenangebot = Alexplusde\Stellenangebote\Posting::get(1);
  * if ($stellenangebot) {
  *     echo $stellenangebot->getTitle();
  * }
  * 
  */
 
-class stellenangebote extends \rex_yform_manager_dataset {
+class Posting extends \rex_yform_manager_dataset {
     
     /**
      * Gibt den Titel des Stellenangebots zurück.
@@ -100,7 +111,7 @@ class stellenangebote extends \rex_yform_manager_dataset {
      */
     public function setImage(string $filename) : self {
         if(rex_media::get($filename)) {
-            $this->getValue("image", $filename);
+            $this->setValue("image", $filename);
         }
         return $this;
     }
@@ -126,7 +137,7 @@ class stellenangebote extends \rex_yform_manager_dataset {
      */
     public function setVideo(string $filename) : self {
         if(rex_media::get($filename)) {
-            $this->getValue("video", $filename);
+            $this->setValue("video", $filename);
         }
         return $this;
     }
@@ -202,10 +213,10 @@ class stellenangebote extends \rex_yform_manager_dataset {
     /**
      * Gibt die Vorteile des Stellenangebots zurück.
      *
-     * @return rex_yform_manager_dataset|null Die Vorteile des Stellenangebots oder null, wenn keine Vorteile gesetzt sind.
+     * @return rex_yform_manager_collection|null Die Vorteile des Stellenangebots oder null, wenn keine Vorteile gesetzt sind.
      */
-    public function getBenefits() : ?rex_yform_manager_dataset {
-        return $this->getRelatedDataset("benefits");
+    public function getBenefits() : ?\rex_yform_manager_collection {
+        return $this->getRelatedCollection("benefits");
     }
 
     /**
@@ -233,7 +244,7 @@ class stellenangebote extends \rex_yform_manager_dataset {
      *
      * @return stellenangebote_contact|null Die Ansprechperson für das Stellenangebot oder null, wenn keine Ansprechperson gesetzt ist.
      */
-    public function getContact() : ?stellenangebote_contact {
+    public function getContact() : ?Contact {
         return $this->getRelatedDataset("contact");
     }
 
@@ -242,7 +253,7 @@ class stellenangebote extends \rex_yform_manager_dataset {
      *
      * @return rex_yform_manager_dataset|null Der Standort des Stellenangebots oder null, wenn kein Standort gesetzt ist.
      */
-    public function getLocation() : ?rex_yform_manager_dataset {
+    public function getLocation() : ?Location {
         return $this->getRelatedDataset("location");
     }
 
@@ -488,7 +499,7 @@ class stellenangebote extends \rex_yform_manager_dataset {
      *
      * @return rex_yform_manager_collection|null Die Standorte oder null, wenn keine Standorte gesetzt sind.
      */
-    public function getLocations() : ?rex_yform_manager_collection
+    public function getLocations() : ?\rex_yform_manager_collection
     {
         return  $this->getRelatedCollection('location');
     }
@@ -526,7 +537,7 @@ class stellenangebote extends \rex_yform_manager_dataset {
      * @param int $id Die Artikel-ID.
      * @return stellenangebote|null Das Stellenangebot oder null, wenn kein Stellenangebot für die gegebene Artikel-ID gefunden wurde.
      */
-    public static function getByArticleId($id): ?stellenangebote
+    public static function getByArticleId($id): ?Posting
     {
         return self::query()->where('article_id', $id)->findOne();
     }
@@ -552,7 +563,7 @@ class stellenangebote extends \rex_yform_manager_dataset {
      *
      * @return stellenangebote_category|null Die Kategorie des Stellenangebots oder null, wenn keine Kategorie gesetzt ist.
      */
-    public function getCategory(): ?stellenangebote_category
+    public function getCategory(): ?Category
     {
         return $this->getRelatedDataset('category_id');
     }
@@ -584,11 +595,11 @@ class stellenangebote extends \rex_yform_manager_dataset {
      */
     public static function addContentPage()
     {
-        rex_extension::register('PAGES_PREPARED', function () {
-            $page = new rex_be_page('stellenangebote', rex_i18n::msg('stellenangebote_content_page_title'));
+        \rex_extension::register('PAGES_PREPARED', function () {
+            $page = new \rex_be_page('stellenangebote', \rex_i18n::msg('stellenangebote_content_page_title'));
             $page->setPjax(false);
             $page->setSubPath(rex_addon::get('stellenangebote')->getPath('pages/content.form.php'));
-            $page_controller = rex_be_controller::getPageObject('content');
+            $page_controller = \rex_be_controller::getPageObject('content');
             $page->setItemAttr('class', "pull-left");
             $page_controller->addSubpage($page);
         });
@@ -600,9 +611,9 @@ class stellenangebote extends \rex_yform_manager_dataset {
      * @param int $limit Die maximale Anzahl der zurückgegebenen Stellenangebote. Standardmäßig ist dieser Wert auf 6 gesetzt.
      * @return rex_yform_manager_collection|null Eine Sammlung von Stellenangeboten oder null, wenn keine Stellenangebote gefunden wurden.
      */
-    public static function findOnline($limit = 6): ?rex_yform_manager_collection
+    public static function findOnline($limit = 6): ?\rex_yform_manager_collection
     {
-        return stellenangebote::query()->where("status", 1, '>=')->limit($limit)->find();
+        return Posting::query()->where("status", 1, '>=')->limit($limit)->find();
     }    
     
     /**

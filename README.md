@@ -27,25 +27,7 @@ Ein Addon zum Verwalten von Stellenanzeigen in REDAXO mit sinnvollen Vorlagen f√
 
 Neben der allgemeinen Methoden von YOrm <https://github.com/yakamara/redaxo_yform/blob/master/docs/04_yorm.md> gibt es spezifische Methoden der einzelnen Klassen.
 
-### Die Klasse `stellenangebote`
-
-Typ `rex_yform_manager_dataset`. Greift auf die Tabelle `rex_stellenangebote` mit Fragen und Antworten zu.
-
-```php
-$stelle = stellenangebote::get(3); // Stellenangebot mit der id=3
-```
-
-### Die Klasse `stellenangebote_contact`
-
-Typ `rex_yform_manager_dataset`. Greift auf die Tabelle `rex_stellenangebote_contact` auf die Ansprechperson der Stelle zu.
-
-### Die Klasse `stellenangebote_location`
-
-Typ `rex_yform_manager_dataset`. Greift auf die Tabelle `rex_stellenangebote_location` mit Standorten des Unternehmens zu.
-
-### Die Klasse `stellenangebote_apply`
-
-Typ `rex_yform_manager_dataset`. Greift auf die Tabelle `rex_stellenangebote_apply` mit Bewerberdaten zu, sofern das Bewerberformular verf√ºgbar ist.
+Mehr dazu in der umfangreichen Dokumentation im Addon (oder im [Docs-Verzeichnis](https://github.com/alexplusde/stellenangebote/blob/master/docs/)).
 
 ## Lizenz
 
@@ -54,8 +36,8 @@ MIT Lizenz, siehe [LICENSE](https://github.com/alexplusde/stellenangebote/blob/m
 ## Autoren
 
 **Alexander Walther**  
-http://www.alexplus.de  
-https://github.com/alexplusde  
+<http://www.alexplus.de>  
+<https://github.com/alexplusde>  
 
 **Projekt-Lead**  
 [Alexander Walther](https://github.com/alexplusde)
