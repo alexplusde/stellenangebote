@@ -1,22 +1,25 @@
 <?php
 
-$stellenangebot = stellenangebote::get($this->getVar("id"));
+use Alexplusde\Stellenangebote\Posting;
+use rex_config;
 
-$stelle = [];
-$stelle["@context"] = "https://schema.org/";
-$stelle["@type"] = "JobPosting";
-$stelle["title"] = $stellenangebot->getTitle();
-$stelle["description"] = $stellenangebot->getDescription();
-$stelle["datePosted"] = date("Y-m-d", strtotime($stellenangebot->getDatePosted()));
+$stellenangebot = Posting::get($this->getVar("id"));
 
-$stelle["directApply"] = $stellenangebot->getdirectApply();
-$stelle["employmentType"] = $stellenangebot->getEmploymentType();
+$output = [];
+$output["@context"] = "https://schema.org/";
+$output["@type"] = "JobPosting";
+$output["title"] = $stellenangebot->getTitle();
+$output["description"] = $stellenangebot->getDescription();
+$output["datePosted"] = date("Y-m-d", strtotime($stellenangebot->getDatePosted()));
+
+$output["directApply"] = $stellenangebot->getdirectApply();
+$output["employmentType"] = $stellenangebot->getEmploymentType();
 
 if ($stellenangebot->getValidThrough()) {
-    $stelle["validThrough"] = date("Y-m-d", strtotime($stellenangebot->getValidThrough()));
+    $output["validThrough"] = date("Y-m-d", strtotime($stellenangebot->getValidThrough()));
 }
 
-$stelle["employmentType"] = $stellenangebot->getEmploymentType();
+$output["employmentType"] = $stellenangebot->getEmploymentType();
 
 $hiringOrganization = [];
 $hiringOrganization["@type"] = "Organization";
@@ -27,7 +30,7 @@ if (rex_config::get("stellenangebote", "company_logo")) {
     $hiringOrganization["logo"] = rex_config::get("stellenangebote", "company_logo");
 }
 
-$stelle["hiringOrganization"] = $hiringOrganization;
+$output["hiringOrganization"] = $hiringOrganization;
 
 $locations = $stellenangebot->getLocations();
 $jobLocations = [];
@@ -58,4 +61,4 @@ if ($stellenangebot->getBaseSalary()) {
 }
 */
 
-echo json_encode($stelle);
+echo json_encode($output);
