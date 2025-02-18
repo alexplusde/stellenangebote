@@ -32,7 +32,7 @@ $field->setNotice(rex_i18n::msg('stellenangebote_config_company_url_notice'));
 # Editor
 $field = $form->addInputField('text', 'editor', null, ['class' => 'form-control']);
 $field->setLabel(rex_i18n::msg('stellenangebote_editor'));
-$field->setNotice('z.B. <code>form-control redactor-editor--default</code>');
+$field->setNotice('Ersezt in Textarea-Feldern das Class-Attribut mit gewünschten Attributen, z.B. <code>class="form-control redactor-editor--default"</code>, zusätzliche Attribute möglich.');
 
 # Metafelder beschränken
 $field = $form->addLinkmapField('category_id');
