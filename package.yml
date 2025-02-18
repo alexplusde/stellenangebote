@@ -1,5 +1,5 @@
 package: stellenangebote
-version: '4.0.0-dev-2025-02-18'
+version: '4.0.0'
 author: 'Alexander Walther, Paul Götz'
 supportpage: https://github.com/alexplusde/stellenangebote
 
