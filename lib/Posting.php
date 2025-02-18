@@ -499,9 +499,9 @@ class Posting extends \rex_yform_manager_dataset {
      *
      * @return rex_yform_manager_collection|null Die Standorte oder null, wenn keine Standorte gesetzt sind.
      */
-    public function getLocations() : ?\rex_yform_manager_collection
+    public function getLocations() : \rex_yform_manager_collection
     {
-        return  $this->getRelatedCollection('location');
+        return  $this->getRelatedCollection('location') ?? [];
     }
 
     /**
